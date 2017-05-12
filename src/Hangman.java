@@ -9,4 +9,5 @@ public class Hangman {
     private static int mGuesses;
     private static int mLives;
     private static char[] mGuessedLetters;
+    
 }
