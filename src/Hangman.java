@@ -10,9 +10,11 @@ public class Hangman {
     private final String CORRECT_GUESS = "Your guess is correct";
     private final String INCORRECT_GUESS = "Your guess is incorrect";
     private final String DUPLICATE_GUESS = "You have already guessed ";
+    private final String NO_LIVES_MESSAGE = "Sorry, you are out of lives. The correct phrase was: ";
+    private final String WIN_MESSAGE = "CORRECT! The phrase was ";
     private String mPhrase;
     private int mGuesses = 6;
-    private int mLives;
+    private int mLives = 7;
     private ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private char[] mPhraseArray;
     private ArrayList<Character> mCorrectLetters = new ArrayList<>();
@@ -45,12 +47,19 @@ public class Hangman {
 
     public String guess(char letter){
         letter = Character.toLowerCase(letter);
-        if (contains(mPhraseArray, letter) && !isGuessed(letter)){
+        if (hasWon()){
+            return WIN_MESSAGE + this.getPhrase();
+        }else if (mLives < 1){
+            return NO_LIVES_MESSAGE + this.getPhrase();
+        } else if (contains(mPhraseArray, letter) && !isGuessed(letter)){
+            mGuesses++;
             mCorrectLetters.add(letter);
             mGuessedLetters.add(letter);
             return CORRECT_GUESS;
         }else if (!isGuessed(letter)){
+            mGuesses++;
             mGuessedLetters.add(letter);
+            mLives--;
             return INCORRECT_GUESS;
         }else {
             return DUPLICATE_GUESS + letter;
@@ -73,5 +82,23 @@ public class Hangman {
             }
         }
         return false;
+    }
+
+    private boolean contains(ArrayList<Character> array, Character letter){
+        for (Character position : array){
+            if (position == letter){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean hasWon(){
+        for (int i = 0; i < mPhrase.length(); i++){
+            if (!contains(mGuessedLetters, mPhraseArray[i])){
+                return false;
+            }
+        }
+        return true;
     }
 }

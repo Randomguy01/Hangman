@@ -17,8 +17,9 @@ public class Main extends JComponent {
         Main Main = new Main();
         //Main.setUp();
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
-        while (true){
-           showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0)));
+        while (mHangmanGame.getLives() > 0){
+           showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
+            + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
         }
     }
 
