@@ -18,12 +18,7 @@ public class Main extends JComponent {
         //Main.setUp();
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
         while (true){
-            boolean isCorrect = mHangmanGame.guess(JOptionPane.showInputDialog(null, "Guess: ")
-                    .charAt(0));
-            if (isCorrect)
-                showMessage("Your guess is correct");
-            else
-                showMessage("Your guess is incorrect");
+           showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0)));
         }
     }
 

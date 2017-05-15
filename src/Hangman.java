@@ -7,6 +7,9 @@ import java.util.ArrayList;
  * JDK 1.8
  */
 public class Hangman {
+    private final String CORRECT_GUESS = "Your guess is correct";
+    private final String INCORRECT_GUESS = "Your guess is incorrect";
+    private final String DUPLICATE_GUESS = "You have already guessed ";
     private String mPhrase;
     private int mGuesses = 6;
     private int mLives;
@@ -40,17 +43,19 @@ public class Hangman {
         return mGuessedLetters;
     }
 
-    public boolean guess(char letter){
+    public String guess(char letter){
         letter = Character.toLowerCase(letter);
         if (contains(mPhraseArray, letter) && !isGuessed(letter)){
             mCorrectLetters.add(letter);
             mGuessedLetters.add(letter);
-            return true;
+            return CORRECT_GUESS;
         }else if (!isGuessed(letter)){
             mGuessedLetters.add(letter);
+            return INCORRECT_GUESS;
+        }else {
+            return DUPLICATE_GUESS + letter;
         }
 
-        return false;
     }
 
     private boolean isGuessed(char letter){
