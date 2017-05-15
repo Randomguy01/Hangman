@@ -7,52 +7,65 @@ import java.util.ArrayList;
  * JDK 1.8
  */
 public class Hangman {
-    private static String mPhrase;
-    private static int mGuesses = 6;
-    private static int mLives;
-    private static ArrayList<Character> mGuessedLetters = new ArrayList<>();
-    private static char[] mPhraseArray;
+    private String mPhrase;
+    private int mGuesses = 6;
+    private int mLives;
+    private ArrayList<Character> mGuessedLetters = new ArrayList<>();
+    private char[] mPhraseArray;
+    private ArrayList<Character> mCorrectLetters = new ArrayList<>();
 
     public Hangman(String phrase) {
         mPhrase = phrase;
+        mPhraseArray = mPhrase.toLowerCase().toCharArray();
     }
 
-    public static String getPhrase() {
+    public String getPhrase() {
         return mPhrase;
     }
 
-    public static void setPhrase(String phrase) {
-        Hangman.mPhrase = phrase;
+    public void setPhrase(String phrase) {
+        mPhrase = phrase;
     }
 
-    public static int getGuesses() {
+    public int getGuesses() {
         return mGuesses;
     }
 
-    public static int getLives() {
+    public int getLives() {
         return mLives;
     }
 
-    public static ArrayList<Character> getGuessedLetters() {
+
+    public ArrayList<Character> getGuessedLetters() {
         return mGuessedLetters;
     }
 
-    public static boolean guess(char letter){
-        mGuessedLetters.add(letter);
-
-        for (int i = 0; i < mPhraseArray.length; i++) {
-            if (mPhraseArray[i] == letter && !isGuessed(letter)){
-
-            }
+    public boolean guess(char letter){
+        letter = Character.toLowerCase(letter);
+        if (contains(mPhraseArray, letter) && !isGuessed(letter)){
+            mCorrectLetters.add(letter);
+            mGuessedLetters.add(letter);
+            return true;
+        }else if (!isGuessed(letter)){
+            mGuessedLetters.add(letter);
         }
 
         return false;
     }
 
-    private static boolean isGuessed(char letter){
+    private boolean isGuessed(char letter){
         for (char guessedLetter : mGuessedLetters){
             if (guessedLetter == letter)
                 return true;
+        }
+        return false;
+    }
+
+    private boolean contains(char[] array, char letter) {
+        for (char position : array){
+            if (position == letter){
+                return true;
+            }
         }
         return false;
     }
