@@ -16,10 +16,15 @@ public class Main extends JComponent {
     public static void main(String[] args) {
         Main Main = new Main();
         //Main.setUp();
+        newHangmanGame();
+        //TODO: Add ability to play again
+    }
+
+    private static void newHangmanGame(){
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
         while (mHangmanGame.getLives() > 0){
-           showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
-            + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
+            showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
+                    + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
         }
     }
 
