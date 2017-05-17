@@ -16,26 +16,29 @@ public class Main extends JComponent {
     public static void main(String[] args) {
         Main Main = new Main();
         //Main.setUp();
-        boolean shouldPlay = true;
+        boolean shouldPlay;
         do {
             playGame();
             shouldPlay = false;
             contains("Hi", 'g');
             if (contains(JOptionPane.showInputDialog(null, "Do you want to play again")
-                    , 'f')){
-                
-
+                    , 'y')) {
+                shouldPlay = true;
             }
         }while (shouldPlay);
 
-        //TODO: Add ability to play again
     }
 
     private static void playGame(){
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
-        while (mHangmanGame.getLives() > 0){
+        while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
+        }
+        if (mHangmanGame.hasWon()) {
+            showMessage(mHangmanGame.getWIN_MESSAGE());
+        } else if (mHangmanGame.getLives() < 1) {
+            showMessage(mHangmanGame.getNO_LIVES_MESSAGE());
         }
     }
     private static boolean contains(String string, char character){
@@ -66,7 +69,8 @@ public class Main extends JComponent {
     public void paintComponent(Graphics g) {
 
     }
-    public void drawCharacterSlots(char) {
+
+    public void drawCharacterSlots() {
 
     }
 }
