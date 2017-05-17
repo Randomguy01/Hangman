@@ -1,5 +1,3 @@
-import com.sun.java.accessibility.util.TopLevelWindowListener;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,7 +7,7 @@ import java.awt.*;
  * JDK 1.8
  * Program: 
  */
-
+//boogly boo
 public class Main extends JComponent {
     private static Hangman mHangmanGame;
     JFrame mFrame = new JFrame();
@@ -25,9 +23,6 @@ public class Main extends JComponent {
             shouldPlay = false;
             contains("Hi", 'g');
             if (contains(JOptionPane.showInputDialog(null, "Do you want to play again")
-                    , 'f')){
-
-
                     , 'y')) {
                 shouldPlay = true;
             }
