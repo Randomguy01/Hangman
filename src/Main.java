@@ -1,3 +1,5 @@
+import com.sun.java.accessibility.util.TopLevelWindowListener;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -12,11 +14,12 @@ public class Main extends JComponent {
     private static Hangman mHangmanGame;
     JFrame mFrame = new JFrame();
     Container mContainer = mFrame.getContentPane();
+    Container mPhraseContainer = new Container();
 
     public static void main(String[] args) {
         Main Main = new Main();
-        //Main.setUp();
-        newHangmanGame();
+        Main.setUp();
+        //newHangmanGame();
         //TODO: Add ability to play again
     }
 
@@ -31,7 +34,7 @@ public class Main extends JComponent {
     public void setUp() {
         mContainer.setBackground(Color.WHITE);
         mContainer.add(this);
-
+        this.add(mPhraseContainer);
         mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         mFrame.setUndecorated(true);
         mFrame.setLocationRelativeTo(null);
@@ -45,9 +48,9 @@ public class Main extends JComponent {
 
     @Override
     public void paintComponent(Graphics g) {
-
+        mPhraseContainer.setSize(Toolkit.getDefaultToolkit().getScreenSize().width, Toolkit.getDefaultToolkit().getScreenSize().height/4);
+        mPhraseContainer.setBackground(Color.BLACK);
     }
-    public void drawCharacterSlots(char) {
-
+    public void drawCharacterSlots(Graphics g, String mPhrase, char correctLetters[]){
     }
 }

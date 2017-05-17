@@ -17,6 +17,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# IntelliJ IDEA XML Files
+*.xml
+
+
 # =========================
 # Operating System Files
 # =========================
