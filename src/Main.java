@@ -21,7 +21,9 @@ public class Main extends JComponent {
             playGame();
             shouldPlay = false;
             contains("Hi", 'g');
-            if (contains(JOptionPane.showInputDialog(null, "Do you want to play again")), 'f'){
+            if (contains(JOptionPane.showInputDialog(null, "Do you want to play again")
+                    , 'f')){
+                
 
             }
         }while (shouldPlay);
