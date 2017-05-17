@@ -47,4 +47,7 @@ public class Main extends JComponent {
     public void paintComponent(Graphics g) {
 
     }
+    public void drawCharacterSlots(char) {
+
+    }
 }
