@@ -16,16 +16,33 @@ public class Main extends JComponent {
     public static void main(String[] args) {
         Main Main = new Main();
         //Main.setUp();
-        newHangmanGame();
+        boolean shouldPlay = true;
+        do {
+            playGame();
+            shouldPlay = false;
+            contains("Hi", 'g');
+            if (contains(JOptionPane.showInputDialog(null, "Do you want to play again")), 'f'){
+
+            }
+        }while (shouldPlay);
+
         //TODO: Add ability to play again
     }
 
-    private static void newHangmanGame(){
+    private static void playGame(){
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
         while (mHangmanGame.getLives() > 0){
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
         }
+    }
+    private static boolean contains(String string, char character){
+        char[] stringArray = string.toLowerCase().toCharArray();
+        for (char arrayChar : stringArray){
+            if (arrayChar == character)
+                return true;
+        }
+        return false;
     }
 
     public void setUp() {
