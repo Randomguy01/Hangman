@@ -28,19 +28,23 @@ public class Main extends JComponent {
                     , 'f')){
 
 
+                    , 'y')) {
+                shouldPlay = true;
             }
         }while (shouldPlay);
 
-        Main.setUp();
-        //newHangmanGame();
-        //TODO: Add ability to play again
     }
 
     private static void playGame(){
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
-        while (mHangmanGame.getLives() > 0){
+        while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
+        }
+        if (mHangmanGame.hasWon()) {
+            showMessage(mHangmanGame.getWIN_MESSAGE());
+        } else if (mHangmanGame.getLives() < 1) {
+            showMessage(mHangmanGame.getNO_LIVES_MESSAGE());
         }
     }
     private static boolean contains(String string, char character){

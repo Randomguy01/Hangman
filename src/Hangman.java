@@ -40,6 +40,14 @@ public class Hangman {
         return mLives;
     }
 
+    public String getWIN_MESSAGE() {
+        return WIN_MESSAGE + mPhrase;
+    }
+
+    public String getNO_LIVES_MESSAGE() {
+        return NO_LIVES_MESSAGE + mPhrase;
+    }
+
 
     public ArrayList<Character> getGuessedLetters() {
         return mGuessedLetters;
@@ -93,7 +101,7 @@ public class Hangman {
         return false;
     }
 
-    private boolean hasWon(){
+    public boolean hasWon() {
         for (int i = 0; i < mPhrase.length(); i++){
             if (!contains(mGuessedLetters, mPhraseArray[i])){
                 return false;
