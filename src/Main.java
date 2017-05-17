@@ -7,7 +7,7 @@ import java.awt.*;
  * JDK 1.8
  * Program: 
  */
-//boogly boo
+//boogly boo boo hoo hoo
 public class Main extends JComponent {
     private static Hangman mHangmanGame;
     JFrame mFrame = new JFrame();
@@ -52,14 +52,22 @@ public class Main extends JComponent {
     }
 
     public void setUp() {
+        mPhraseContainer.setSize(Toolkit.getDefaultToolkit().getScreenSize().width,
+                Toolkit.getDefaultToolkit().getScreenSize().height / 4);
         mContainer.setBackground(Color.WHITE);
-        mContainer.add(this);
+
+        mPhraseContainer.setBackground(Color.BLACK);
         this.add(mPhraseContainer);
+
+        mContainer.add(this);
+
+
         mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         mFrame.setUndecorated(true);
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mFrame.setVisible(true);
+        mFrame.add(mContainer);
     }
 
     private static void showMessage(String message){
@@ -68,8 +76,7 @@ public class Main extends JComponent {
 
     @Override
     public void paintComponent(Graphics g) {
-        mPhraseContainer.setSize(Toolkit.getDefaultToolkit().getScreenSize().width, Toolkit.getDefaultToolkit().getScreenSize().height/4);
-        mPhraseContainer.setBackground(Color.BLACK);
+
     }
     public void drawCharacterSlots(Graphics g, String mPhrase, char correctLetters[]){
     }
