@@ -32,7 +32,8 @@ public class Main extends JComponent {
         mContainer.setBackground(Color.WHITE);
         mContainer.add(this);
 
-        mFrame.setSize(500, 500);
+        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        mFrame.setUndecorated(true);
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mFrame.setVisible(true);
