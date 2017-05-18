@@ -14,21 +14,21 @@ public class Main extends JComponent {
     private final JFrame mFrame = new JFrame();
     private final Container mContainer = mFrame.getContentPane();
     JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
-    JPanel mPhrasePanel, mFigurePanel, mAlphabetPanel, mStatsPanel = new JPanel();
+    JPanel mPhrasePanel = new JPanel(),
+            mFigurePanel = new JPanel(),
+            mAlphabetPanel = new JPanel(),
+            mStatsPanel = new JPanel();
+    GridBagConstraints mGridBagConstraints = new GridBagConstraints();
 
     public static void main(String[] args) {
         Main Main = new Main();
         Main.setUp();
         boolean shouldPlay;
-        do {
-            playGame();
-            shouldPlay = false;
-            contains("Hi", 'g');
-            if (contains(JOptionPane.showInputDialog(null, "Do you want to play again")
-                    , 'y')) {
-                shouldPlay = true;
-            }
-        } while (shouldPlay);
+//        do {
+//            playGame();
+//            shouldPlay = contains(JOptionPane.showInputDialog(null, "Do you want to play again")
+//                    , 'y');
+//        } while (shouldPlay); TODO: Uncomment when finished ui
 
     }
 
@@ -59,15 +59,35 @@ public class Main extends JComponent {
     }
 
     public void setUp() {
+        //Set up constraints for mPhrasePanel
+        mGridBagConstraints.gridx = 0;
+        mGridBagConstraints.gridy = 2;
+        mGridBagConstraints.weightx = 1.0;
+        mGridBagConstraints.weighty = 0.5;
+        mGridBagConstraints.fill = GridBagConstraints.BOTH;
+        //set up panel
+        mPhrasePanel.setBackground(Color.BLUE);
+        mParentPanel.add(mPhrasePanel, mGridBagConstraints);
+
+        //Set up constraints for mFigurePanel
+        mGridBagConstraints.gridx = 0;
+        mGridBagConstraints.gridy = 1;
+        mGridBagConstraints.weightx = 1.0;
+        mGridBagConstraints.weighty = 1.0;
+        mGridBagConstraints.fill = GridBagConstraints.BOTH;
+        //set up panel
+        mFigurePanel.setBackground(Color.RED);
+        mParentPanel.add(mFigurePanel, mGridBagConstraints);
 
 
         mContainer.add(this);
+        mContainer.add(mParentPanel);
         mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        mFrame.setUndecorated(true);
+        mFrame.setIconImage(null);//TODO: make a hangman icon image
+        mFrame.setUndecorated(false);//@Eli, we can change this later if we want to
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mFrame.setVisible(true);
-        mFrame.add(mContainer);
     }
 
     @Override
@@ -75,7 +95,7 @@ public class Main extends JComponent {
 
     }
 
-    public void drawCharacterSlots(Graphics g, String mPhrase, char correctLetters[]) {
+    private void drawCharacterSlots(Graphics g, String mPhrase, char correctLetters[]) {
         //TODO: use for loop to draw apropriate lines
     }
 }
