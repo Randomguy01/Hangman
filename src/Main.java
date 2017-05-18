@@ -13,12 +13,12 @@ public class Main extends JComponent {
     private static Hangman mHangmanGame;
     private final JFrame mFrame = new JFrame();
     private final Container mContainer = mFrame.getContentPane();
-    JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
-    JPanel mPhrasePanel = new JPanel(),
+    private JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
+    private JPanel mPhrasePanel = new JPanel(),
             mFigurePanel = new JPanel(),
             mAlphabetPanel = new JPanel(),
             mStatsPanel = new JPanel();
-    GridBagConstraints mGridBagConstraints = new GridBagConstraints();
+    private GridBagConstraints mGridBagConstraints = new GridBagConstraints();
 
     public static void main(String[] args) {
         Main Main = new Main();
