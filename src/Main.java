@@ -12,7 +12,8 @@ public class Main extends JComponent {
     private static Hangman mHangmanGame;
     JFrame mFrame = new JFrame();
     Container mContainer = mFrame.getContentPane();
-    Container mPhraseContainer = new Container();
+    JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
+    JPanel mPhrasePanel, mFigurePanel, mAlphabetPanel, mStatsPanel = new JPanel();
 
     public static void main(String[] args) {
         Main Main = new Main();
@@ -52,16 +53,9 @@ public class Main extends JComponent {
     }
 
     public void setUp() {
-        mPhraseContainer.setSize(Toolkit.getDefaultToolkit().getScreenSize().width,
-                Toolkit.getDefaultToolkit().getScreenSize().height / 4);
-        mContainer.setBackground(Color.WHITE);
 
-        mPhraseContainer.setBackground(Color.BLACK);
-        this.add(mPhraseContainer);
 
         mContainer.add(this);
-
-
         mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         mFrame.setUndecorated(true);
         mFrame.setLocationRelativeTo(null);
