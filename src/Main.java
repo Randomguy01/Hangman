@@ -63,7 +63,7 @@ public class Main extends JComponent {
         mGridBagConstraints.gridx = 0;
         mGridBagConstraints.gridy = 2;
         mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 0.8;
+        mGridBagConstraints.weighty = 0.4;
         mGridBagConstraints.fill = GridBagConstraints.BOTH;
         mGridBagConstraints.gridwidth = 2;
         //set up panel
@@ -85,7 +85,7 @@ public class Main extends JComponent {
         mGridBagConstraints.gridx = 0;
         mGridBagConstraints.gridy = 0;
         mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 1.0;
+        mGridBagConstraints.weighty = 0.35;
         mGridBagConstraints.fill = GridBagConstraints.BOTH;
         mGridBagConstraints.gridwidth = 1;
         //set up panel
@@ -96,7 +96,7 @@ public class Main extends JComponent {
         mGridBagConstraints.gridx = 1;
         mGridBagConstraints.gridy = 0;
         mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 1.0;
+        mGridBagConstraints.weighty = 0.35;
         mGridBagConstraints.fill = GridBagConstraints.BOTH;
         mGridBagConstraints.gridwidth = 1;
         //set up panel
@@ -118,7 +118,19 @@ public class Main extends JComponent {
 
     }
 
-    private void drawCharacterSlots(Graphics g, String mPhrase, char correctLetters[]) {
+    private void drawCharacterSlots(Graphics g, String mPhrase, char correctLetters[], char[] mPhraseArray) {
         //TODO: use for loop to draw apropriate lines
+
+        JComponent component = new JComponent() {//This will not work may need to create object
+            @Override
+            protected void paintComponent(Graphics g) {
+                for (int i = 0; i < mPhraseArray.length; i++) {
+                    if (mPhraseArray[i] != ' ')
+                        g.drawLine(i * 10, 50, i * 10 + 20, 50);
+                }
+            }
+        };
+        mPhrasePanel.add(component);
+
     }
 }
