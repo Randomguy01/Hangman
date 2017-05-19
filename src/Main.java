@@ -11,7 +11,7 @@ import java.awt.*;
 public class Main extends JComponent {
     @SuppressWarnings("FieldCanBeLocal")
     private static Hangman mHangmanGame;
-    private final JFrame mFrame = new JFrame();
+    private final JFrame mFrame = new JFrame("Hangman");
     private final Container mContainer = mFrame.getContentPane();
     private JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
     private JPanel mPhrasePanel = new JPanel(),
@@ -63,8 +63,9 @@ public class Main extends JComponent {
         mGridBagConstraints.gridx = 0;
         mGridBagConstraints.gridy = 2;
         mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 0.5;
+        mGridBagConstraints.weighty = 0.8;
         mGridBagConstraints.fill = GridBagConstraints.BOTH;
+        mGridBagConstraints.gridwidth = 2;
         //set up panel
         mPhrasePanel.setBackground(Color.BLUE);
         mParentPanel.add(mPhrasePanel, mGridBagConstraints);
@@ -75,10 +76,32 @@ public class Main extends JComponent {
         mGridBagConstraints.weightx = 1.0;
         mGridBagConstraints.weighty = 1.0;
         mGridBagConstraints.fill = GridBagConstraints.BOTH;
+        mGridBagConstraints.gridwidth = 2;
         //set up panel
         mFigurePanel.setBackground(Color.RED);
         mParentPanel.add(mFigurePanel, mGridBagConstraints);
 
+        //Set up constraints for mAlphabetPanel
+        mGridBagConstraints.gridx = 0;
+        mGridBagConstraints.gridy = 0;
+        mGridBagConstraints.weightx = 1.0;
+        mGridBagConstraints.weighty = 1.0;
+        mGridBagConstraints.fill = GridBagConstraints.BOTH;
+        mGridBagConstraints.gridwidth = 1;
+        //set up panel
+        mAlphabetPanel.setBackground(Color.GREEN);
+        mParentPanel.add(mAlphabetPanel, mGridBagConstraints);
+
+        //Set up constraints for mStatsPanel
+        mGridBagConstraints.gridx = 1;
+        mGridBagConstraints.gridy = 0;
+        mGridBagConstraints.weightx = 1.0;
+        mGridBagConstraints.weighty = 1.0;
+        mGridBagConstraints.fill = GridBagConstraints.BOTH;
+        mGridBagConstraints.gridwidth = 1;
+        //set up panel
+        mStatsPanel.setBackground(Color.MAGENTA);
+        mParentPanel.add(mStatsPanel, mGridBagConstraints);
 
         mContainer.add(this);
         mContainer.add(mParentPanel);
