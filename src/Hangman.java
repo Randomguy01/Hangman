@@ -20,6 +20,11 @@ class Hangman {
     private int mLives = 7;
     private final ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private final char[] mPhraseArray;
+
+    public ArrayList<Character> getCorrectLetters() {
+        return mCorrectLetters;
+    }
+
     private final ArrayList<Character> mCorrectLetters = new ArrayList<>();
 
     public Hangman(String phrase) {

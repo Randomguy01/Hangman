@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 /*
  * Ian White
@@ -14,7 +15,7 @@ public class Main extends JComponent {
     private final JFrame mFrame = new JFrame("Hangman");
     private final Container mContainer = mFrame.getContentPane();
     private JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
-    private JPanel mPhrasePanel = new JPanel(),
+    private static JPanel mPhrasePanel = new JPanel(),
             mFigurePanel = new JPanel(),
             mAlphabetPanel = new JPanel(),
             mStatsPanel = new JPanel();
@@ -24,19 +25,21 @@ public class Main extends JComponent {
         Main Main = new Main();
         Main.setUp();
         boolean shouldPlay;
-//        do {
-//            playGame();
-//            shouldPlay = contains(JOptionPane.showInputDialog(null, "Do you want to play again")
-//                    , 'y');
-//        } while (shouldPlay); TODO: Uncomment when finished ui
+        do {
+            playGame();
+            shouldPlay = contains(JOptionPane.showInputDialog(null, "Do you want to play again")
+                    , 'y');
+        } while (shouldPlay); //TODO: Uncomment when finished ui
 
     }
 
     private static void playGame() {
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
+        drawCharacterSlots(mPhrasePanel.getGraphics(), mHangmanGame.getPhrase());
         while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
+            drawCorrectLetters(mPhrasePanel.getGraphics(), mHangmanGame.getPhrase(), mHangmanGame.getCorrectLetters());
         }
         if (mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.getWIN_MESSAGE());
@@ -56,6 +59,32 @@ public class Main extends JComponent {
 
     private static void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
+    }
+
+    private static void drawCharacterSlots(Graphics g, String phrase) {
+        final char[] phraseArray = phrase.toCharArray();
+        g.setColor(Color.WHITE);
+        for (int i = 0; i < phrase.length(); i++) {
+            if (phraseArray[i] != ' ')
+                g.drawLine((i * 50) + 20, 50, (i * 50) + 50, 50);
+        }
+    }
+
+    private static void drawCorrectLetters(Graphics g, String phrase, ArrayList<Character> correctLetters) {
+        g.setColor(Color.WHITE);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 15));
+        final char[] phraseArray = phrase.toLowerCase().toCharArray();
+        for (int i = 0, x = 0; i < phrase.length(); i++) {
+            if (phraseArray[i] == correctLetters.get(x)) {//TODO: add support to print same letter in every place it appears
+                g.drawString(correctLetters.get(x).toString().toUpperCase(), (i * 50) + 30, 40);
+                x++;
+            }
+        }
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+
     }
 
     public void setUp() {
@@ -105,32 +134,12 @@ public class Main extends JComponent {
 
         mContainer.add(this);
         mContainer.add(mParentPanel);
-        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+//        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
+        mFrame.setSize(500, 500);
         mFrame.setIconImage(null);//TODO: make a hangman icon image
         mFrame.setUndecorated(false);//@Eli, we can change this later if we want to
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mFrame.setVisible(true);
-    }
-
-    @Override
-    public void paintComponent(Graphics g) {
-
-    }
-
-    private void drawCharacterSlots(Graphics g, String mPhrase, char correctLetters[], char[] mPhraseArray) {
-        //TODO: use for loop to draw apropriate lines
-
-        JComponent component = new JComponent() {//This will not work may need to create object
-            @Override
-            protected void paintComponent(Graphics g) {
-                for (int i = 0; i < mPhraseArray.length; i++) {
-                    if (mPhraseArray[i] != ' ')
-                        g.drawLine(i * 10, 50, i * 10 + 20, 50);
-                }
-            }
-        };
-        mPhrasePanel.add(component);
-
     }
 }
