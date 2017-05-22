@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -20,6 +21,7 @@ class Hangman {
     private int mLives = 7;
     private final ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private final char[] mPhraseArray;
+    private final Character[] mPhraseArrayNoSpaces;
 
     public ArrayList<Character> getCorrectLetters() {
         return mCorrectLetters;
@@ -30,15 +32,12 @@ class Hangman {
     public Hangman(String phrase) {
         mPhrase = phrase;
         mPhraseArray = mPhrase.toLowerCase().toCharArray();
+        mPhraseArrayNoSpaces = removeWhite(mPhrase).toArray(new Character[removeWhite(mPhrase).size()]);
     }
 
     @SuppressWarnings("WeakerAccess")
     public String getPhrase() {
         return mPhrase;
-    }
-
-    public void setPhrase(String phrase) {
-        mPhrase = phrase;
     }
 
     public int getGuesses() {
@@ -68,7 +67,7 @@ class Hangman {
             return WIN_MESSAGE + this.getPhrase();
         } else if (mLives < 1) {
             return NO_LIVES_MESSAGE + this.getPhrase();
-        } else if (contains(mPhraseArray, letter) && isNotGuessed(letter)) {
+        } else if (contains(mPhraseArrayNoSpaces, letter) && isNotGuessed(letter)) {
             mGuesses++;
             mCorrectLetters.add(letter);
             mGuessedLetters.add(letter);
@@ -92,7 +91,7 @@ class Hangman {
         return true;
     }
 
-    private boolean contains(char[] array, char letter) {
+    private boolean contains(Character[] array, char letter) {
         for (char position : array) {
             if (position == letter) {
                 return true;
@@ -117,5 +116,14 @@ class Hangman {
             }
         }
         return true;
+    }
+
+    private ArrayList<Character> removeWhite(String phrase){
+        ArrayList<Character> noSpaces = new ArrayList<>();
+        for (char character: phrase.toCharArray()){
+            if (character != ' ')
+                noSpaces.add(character);
+        }
+        return noSpaces;
     }
 }

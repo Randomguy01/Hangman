@@ -1,0 +1,283 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 88e3e869289250584586db2da2127ea03698587a)
++++ .idea/workspace.xml	(revision )
+@@ -1,9 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="a0d14e7b-0df6-4447-8786-ccc25e71e502" name="Default" comment="We tried GUI...">
++    <list default="true" id="a0d14e7b-0df6-4447-8786-ccc25e71e502" name="Default" comment="Started GUI">
+       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+     </list>
+     <ignored path="$PROJECT_DIR$/out/" />
+     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+@@ -22,28 +21,24 @@
+   </component>
+   <component name="FileEditorManager">
+     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+-      <file leaf-file-name="Hangman.java" pinned="false" current-in-tab="false">
++      <file leaf-file-name="Hangman.java" pinned="false" current-in-tab="true">
+         <entry file="file://$PROJECT_DIR$/src/Hangman.java">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="578">
++            <state relative-caret-position="125">
+               <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+               <folding>
+-                <element signature="e#976#977#0" expanded="false" />
+-                <element signature="e#1008#1009#0" expanded="false" />
+-                <element signature="e#1039#1040#0" expanded="false" />
+-                <element signature="e#1070#1071#0" expanded="false" />
+-                <element signature="e#1358#1359#0" expanded="false" />
+-                <element signature="e#1396#1397#0" expanded="false" />
++                <element signature="e#1166#1167#0" expanded="true" />
++                <element signature="e#1210#1211#0" expanded="true" />
+               </folding>
+             </state>
+           </provider>
+         </entry>
+       </file>
+-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
++      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+         <entry file="file://$PROJECT_DIR$/src/Main.java">
+           <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="227">
+-              <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
++            <state relative-caret-position="142">
++              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+               <folding>
+                 <element signature="method#main#0;class#Main#0" expanded="false" />
+                 <element signature="method#playGame#0;class#Main#0" expanded="false" />
+@@ -69,6 +64,7 @@
+         <option value="Randomguy01 &lt;ianhwhite2001@gmail.com&gt;" />
+       </list>
+     </option>
++    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GradleLocalSettings">
+@@ -105,6 +101,8 @@
+       <foldersAlwaysOnTop value="true" />
+     </navigator>
+     <panes>
++      <pane id="Scope" />
++      <pane id="Scratches" />
+       <pane id="ProjectPane">
+         <subPane>
+           <PATH>
+@@ -148,8 +146,6 @@
+         </subPane>
+       </pane>
+       <pane id="PackagesPane" />
+-      <pane id="Scope" />
+-      <pane id="Scratches" />
+     </panes>
+   </component>
+   <component name="PropertiesComponent">
+@@ -289,26 +285,36 @@
+       <option name="project" value="LOCAL" />
+       <updated>1495040302014</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Started GUI">
++      <created>1495132247468</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1495132247468</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="ToolWindowManager">
+     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+-    <editor active="true" />
++    <editor active="false" />
+     <layout>
+       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
++      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.50323623" order="7" side_tool="true" content_ui="tabs" />
+       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.49676377" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32897863" sideWeight="0.49676377" order="7" side_tool="false" content_ui="tabs" />
++      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26860842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
++      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27265373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
++      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+@@ -316,12 +322,9 @@
+       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39904988" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+     </layout>
+@@ -351,7 +354,8 @@
+     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+     <MESSAGE value="Added getters for win and loss messages" />
+     <MESSAGE value="We tried GUI..." />
+-    <option name="LAST_COMMIT_MESSAGE" value="We tried GUI..." />
++    <MESSAGE value="Started GUI" />
++    <option name="LAST_COMMIT_MESSAGE" value="Started GUI" />
+     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+   </component>
+@@ -371,12 +375,31 @@
+         <state relative-caret-position="714">
+           <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+           <folding>
+-            <element signature="e#976#977#0" expanded="false" />
+-            <element signature="e#1008#1009#0" expanded="false" />
+-            <element signature="e#1039#1040#0" expanded="false" />
+-            <element signature="e#1070#1071#0" expanded="false" />
+-            <element signature="e#1358#1359#0" expanded="false" />
+-            <element signature="e#1396#1397#0" expanded="false" />
++            <element signature="e#1166#1167#0" expanded="true" />
++            <element signature="e#1210#1211#0" expanded="true" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/Main.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="0">
++          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
++          <folding>
++            <element signature="method#main#0;class#Main#0" expanded="false" />
++            <element signature="method#playGame#0;class#Main#0" expanded="false" />
++            <element signature="method#contains#0;class#Main#0" expanded="false" />
++          </folding>
++        </state>
++      </provider>
++    </entry>
++    <entry file="file://$PROJECT_DIR$/src/Hangman.java">
++      <provider selected="true" editor-type-id="text-editor">
++        <state relative-caret-position="714">
++          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
++          <folding>
++            <element signature="e#1166#1167#0" expanded="true" />
++            <element signature="e#1210#1211#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+@@ -398,12 +421,8 @@
+         <state relative-caret-position="663">
+           <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+           <folding>
+-            <element signature="e#976#977#0" expanded="false" />
+-            <element signature="e#1008#1009#0" expanded="false" />
+-            <element signature="e#1039#1040#0" expanded="false" />
+-            <element signature="e#1070#1071#0" expanded="false" />
+-            <element signature="e#1358#1359#0" expanded="false" />
+-            <element signature="e#1396#1397#0" expanded="false" />
++            <element signature="e#1166#1167#0" expanded="true" />
++            <element signature="e#1210#1211#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+@@ -433,12 +452,8 @@
+         <state relative-caret-position="663">
+           <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
+           <folding>
+-            <element signature="e#976#977#0" expanded="false" />
+-            <element signature="e#1008#1009#0" expanded="false" />
+-            <element signature="e#1039#1040#0" expanded="false" />
+-            <element signature="e#1070#1071#0" expanded="false" />
+-            <element signature="e#1358#1359#0" expanded="false" />
+-            <element signature="e#1396#1397#0" expanded="false" />
++            <element signature="e#1166#1167#0" expanded="true" />
++            <element signature="e#1210#1211#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+@@ -480,12 +495,8 @@
+         <state relative-caret-position="391">
+           <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+           <folding>
+-            <element signature="e#976#977#0" expanded="false" />
+-            <element signature="e#1008#1009#0" expanded="false" />
+-            <element signature="e#1039#1040#0" expanded="false" />
+-            <element signature="e#1070#1071#0" expanded="false" />
+-            <element signature="e#1358#1359#0" expanded="false" />
+-            <element signature="e#1396#1397#0" expanded="false" />
++            <element signature="e#1166#1167#0" expanded="true" />
++            <element signature="e#1210#1211#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+@@ -514,12 +525,8 @@
+         <state relative-caret-position="0">
+           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+           <folding>
+-            <element signature="e#976#977#0" expanded="false" />
+-            <element signature="e#1008#1009#0" expanded="false" />
+-            <element signature="e#1039#1040#0" expanded="false" />
+-            <element signature="e#1070#1071#0" expanded="false" />
+-            <element signature="e#1358#1359#0" expanded="false" />
+-            <element signature="e#1396#1397#0" expanded="false" />
++            <element signature="e#1166#1167#0" expanded="true" />
++            <element signature="e#1210#1211#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>
+@@ -547,29 +554,25 @@
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/Hangman.java">
++    <entry file="file://$PROJECT_DIR$/src/Main.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="578">
+-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
++        <state relative-caret-position="142">
++          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+           <folding>
+-            <element signature="e#976#977#0" expanded="false" />
+-            <element signature="e#1008#1009#0" expanded="false" />
+-            <element signature="e#1039#1040#0" expanded="false" />
+-            <element signature="e#1070#1071#0" expanded="false" />
+-            <element signature="e#1358#1359#0" expanded="false" />
+-            <element signature="e#1396#1397#0" expanded="false" />
++            <element signature="method#main#0;class#Main#0" expanded="false" />
++            <element signature="method#playGame#0;class#Main#0" expanded="false" />
++            <element signature="method#contains#0;class#Main#0" expanded="false" />
+           </folding>
+         </state>
+       </provider>
+     </entry>
+-    <entry file="file://$PROJECT_DIR$/src/Main.java">
++    <entry file="file://$PROJECT_DIR$/src/Hangman.java">
+       <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="227">
+-          <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
++        <state relative-caret-position="125">
++          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+           <folding>
+-            <element signature="method#main#0;class#Main#0" expanded="false" />
+-            <element signature="method#playGame#0;class#Main#0" expanded="false" />
+-            <element signature="method#contains#0;class#Main#0" expanded="false" />
++            <element signature="e#1166#1167#0" expanded="true" />
++            <element signature="e#1210#1211#0" expanded="true" />
+           </folding>
+         </state>
+       </provider>

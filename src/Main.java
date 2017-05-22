@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /*
@@ -9,10 +10,10 @@ import java.util.ArrayList;
  * Program: 
  */
 //boogly boo boo hoo hoo
-public class Main extends JComponent {
+public class Main {
     @SuppressWarnings("FieldCanBeLocal")
     private static Hangman mHangmanGame;
-    private final JFrame mFrame = new JFrame("Hangman");
+    private static final JFrame mFrame = new JFrame("Hangman");
     private final Container mContainer = mFrame.getContentPane();
     private JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
     private static JPanel mPhrasePanel = new JPanel(),
@@ -30,6 +31,8 @@ public class Main extends JComponent {
             shouldPlay = contains(JOptionPane.showInputDialog(null, "Do you want to play again")
                     , 'y');
         } while (shouldPlay); //TODO: Uncomment when finished ui
+        mFrame.dispose();//should close frame if user does not want to play again
+
 
     }
 
@@ -74,17 +77,16 @@ public class Main extends JComponent {
         g.setColor(Color.WHITE);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 15));
         final char[] phraseArray = phrase.toLowerCase().toCharArray();
-        for (int i = 0, x = 0; i < phrase.length(); i++) {
-            if (phraseArray[i] == correctLetters.get(x)) {//TODO: add support to print same letter in every place it appears
-                g.drawString(correctLetters.get(x).toString().toUpperCase(), (i * 50) + 30, 40);
+        for (int i = 0, x = 0; i < phrase.length() && x < correctLetters.size(); i++) {
+            if (phraseArray[i] == correctLetters.get(x)) {
+                for(int y = 0; y < getAllPositions(correctLetters.get(x)).size(); y++){
+                    System.out.println("Drawing: " + phraseArray[i]);
+                    int something = getAllPositions(correctLetters.get(x).toString().charAt(0)).get(y);
+                    g.drawString(correctLetters.get(x).toString().toUpperCase(), ((something) * 50) + 30, 40);
+                }
                 x++;
             }
         }
-    }
-
-    @Override
-    public void paintComponent(Graphics g) {
-
     }
 
     public void setUp() {
@@ -132,14 +134,25 @@ public class Main extends JComponent {
         mStatsPanel.setBackground(Color.MAGENTA);
         mParentPanel.add(mStatsPanel, mGridBagConstraints);
 
-        mContainer.add(this);
         mContainer.add(mParentPanel);
 //        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        mFrame.setSize(500, 500);
+        mFrame.setSize(700, 700);
         mFrame.setIconImage(null);//TODO: make a hangman icon image
         mFrame.setUndecorated(false);//@Eli, we can change this later if we want to
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mFrame.setVisible(true);
     }
+
+    private static ArrayList<Integer> getAllPositions(char letter){
+        ArrayList<Integer> positions = new ArrayList<>();
+        char[] phraseArray = mHangmanGame.getPhrase().toCharArray();
+        for (int i = 0; i < phraseArray.length; i++) {
+            if (phraseArray[i] ==  letter)
+                positions.add(i);
+        }
+        System.out.println(positions);
+        return positions;
+    }
+
 }
