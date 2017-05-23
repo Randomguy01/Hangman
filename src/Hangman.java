@@ -105,7 +105,7 @@ class Hangman {
     }
 
     public boolean hasWon() {
-        for (int i = 0; i < mPhrase.length(); i++) {
+        for (int i = 0; i < mPhrase.length() - 1; i++) {
             if (!contains(mGuessedLetters, mPhraseArrayNoSpaces[i])) {
                 return false;
             }

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d14e7b-0df6-4447-8786-ccc25e71e502" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hangman/Hangman.class" afterPath="$PROJECT_DIR$/out/production/Hangman/Hangman.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hangman/Main.class" afterPath="$PROJECT_DIR$/out/production/Hangman/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.java" afterPath="$PROJECT_DIR$/src/GUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Hangman.java" afterPath="$PROJECT_DIR$/src/Hangman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="H:\LearningJavaThroughAlice\Exercises\Hangman\.idea\shelf/" />
@@ -26,47 +24,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Hangman.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Hangman.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1836">
-              <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+            <state relative-caret-position="860">
+              <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
               <folding>
-                <element signature="e#104#140#0" expanded="true" />
-                <element signature="e#211#247#0" expanded="true" />
-                <element signature="e#322#358#0" expanded="true" />
-                <element signature="e#905#906#0" expanded="true" />
-                <element signature="e#943#944#0" expanded="true" />
-                <element signature="e#1255#1288#0" expanded="true" />
-                <element signature="e#1319#1320#0" expanded="true" />
-                <element signature="e#1349#1350#0" expanded="true" />
-                <element signature="e#1380#1381#0" expanded="true" />
-                <element signature="e#1411#1412#0" expanded="true" />
-                <element signature="e#1440#1441#0" expanded="true" />
-                <element signature="e#1469#1470#0" expanded="true" />
-                <element signature="e#1507#1508#0" expanded="true" />
-                <element signature="e#1551#1552#0" expanded="true" />
-                <element signature="e#1594#1595#0" expanded="true" />
-                <element signature="e#1643#1644#0" expanded="true" />
-                <element signature="e#1699#1700#0" expanded="true" />
-                <element signature="e#1737#1738#0" expanded="true" />
+                <element signature="e#176#212#0" expanded="true" />
+                <element signature="method#contains#0;class#Main#0" expanded="false" />
+                <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+                <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
+                <element signature="method#setUp#0;class#Main#0" expanded="false" />
+                <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+            <state relative-caret-position="264">
+              <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
               <folding>
-                <element signature="e#176#212#0" expanded="true" />
-                <element signature="method#contains#0;class#Main#0" expanded="false" />
-                <element signature="e#2472#2473#0" expanded="true" />
-                <element signature="e#2532#2533#0" expanded="true" />
-                <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
-                <element signature="method#setUp#0;class#Main#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#setUp#0;class#GUI#0" expanded="false" />
+                <element signature="method#drawCharacterSlots#0;class#GUI#0" expanded="false" />
+                <element signature="method#drawCorrectLetters#0;class#GUI#0" expanded="false" />
+                <element signature="method#getAllPositions#0;class#GUI#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -106,9 +91,9 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/HangmanUI.java" />
-        <option value="$PROJECT_DIR$/src/GUI.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Hangman.java" />
+        <option value="$PROJECT_DIR$/src/GUI.java" />
       </list>
     </option>
   </component>
@@ -142,6 +127,11 @@
             <path>
               <item name="Hangman" type="b2602c69:ProjectViewProjectNode" />
               <item name="Hangman" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Hangman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Hangman" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495251000946</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed issue where you need to enter space to win">
+      <created>1495498376763</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1495498376764</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -462,7 +459,8 @@
     <MESSAGE value="Code Cleanup(Should Really do this before first commit :P)" />
     <MESSAGE value="Added four panels in correct layouts" />
     <MESSAGE value="Draws lines for letters and letter when guessed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Draws lines for letters and letter when guessed" />
+    <MESSAGE value="fixed issue where you need to enter space to win" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed issue where you need to enter space to win" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -485,10 +483,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -510,19 +508,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -534,10 +532,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -556,10 +554,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -574,19 +572,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -605,10 +603,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -623,19 +621,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -695,19 +693,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -719,10 +717,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -737,19 +735,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -761,10 +759,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -779,19 +777,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -803,10 +801,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -821,19 +819,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -845,10 +843,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -870,19 +868,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -894,10 +892,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -912,19 +910,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -936,10 +934,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -954,19 +952,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -978,10 +976,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1003,19 +1001,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1027,10 +1025,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1049,10 +1047,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1067,19 +1065,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1098,10 +1096,10 @@
           <folding>
             <element signature="e#176#212#0" expanded="true" />
             <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
             <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1116,19 +1114,19 @@
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1164,51 +1162,58 @@
     <entry file="file://$PROJECT_DIR$/src/HangmanUI.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/awt/Graphics.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/awt/Font.java" />
-    <entry file="file://$PROJECT_DIR$/src/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#176#212#0" expanded="true" />
-            <element signature="method#contains#0;class#Main#0" expanded="false" />
-            <element signature="e#2472#2473#0" expanded="true" />
-            <element signature="e#2532#2533#0" expanded="true" />
-            <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
-            <element signature="method#setUp#0;class#Main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Hangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        <state relative-caret-position="1112">
+          <caret line="107" column="48" lean-forward="false" selection-start-line="107" selection-start-column="48" selection-end-line="107" selection-end-column="48" />
           <folding>
             <element signature="e#104#140#0" expanded="true" />
             <element signature="e#211#247#0" expanded="true" />
             <element signature="e#322#358#0" expanded="true" />
             <element signature="e#905#906#0" expanded="true" />
             <element signature="e#943#944#0" expanded="true" />
-            <element signature="e#1255#1288#0" expanded="true" />
-            <element signature="e#1319#1320#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1440#1441#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1507#1508#0" expanded="true" />
-            <element signature="e#1551#1552#0" expanded="true" />
-            <element signature="e#1594#1595#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1737#1738#0" expanded="true" />
+            <element signature="e#1254#1287#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1410#1411#0" expanded="true" />
+            <element signature="e#1439#1440#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawCharacterSlots#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#GUI#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#GUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="92" column="13" lean-forward="true" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
+          <folding>
+            <element signature="e#176#212#0" expanded="true" />
+            <element signature="method#contains#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
+            <element signature="method#drawCorrectLetters#0;class#Main#0" expanded="false" />
+            <element signature="method#setUp#0;class#Main#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
