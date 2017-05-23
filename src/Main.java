@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /*
@@ -27,7 +26,7 @@ public class Main {
         Main.setUp();
         boolean shouldPlay;
         do {
-            playGame();
+            playGame();//TODO: on restart need to clear lines and clear letters
             shouldPlay = contains(JOptionPane.showInputDialog(null, "Do you want to play again")
                     , 'y');
         } while (shouldPlay); //TODO: Uncomment when finished ui
@@ -43,12 +42,15 @@ public class Main {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
             drawCorrectLetters(mPhrasePanel.getGraphics(), mHangmanGame.getPhrase(), mHangmanGame.getCorrectLetters());
+            if (mHangmanGame.hasWon()) {
+                showMessage(mHangmanGame.getWIN_MESSAGE());
+                break;
+            } else if (mHangmanGame.getLives() < 1) {
+                showMessage(mHangmanGame.getNO_LIVES_MESSAGE());
+                break;
+            }
         }
-        if (mHangmanGame.hasWon()) {
-            showMessage(mHangmanGame.getWIN_MESSAGE());
-        } else if (mHangmanGame.getLives() < 1) {
-            showMessage(mHangmanGame.getNO_LIVES_MESSAGE());
-        }
+
     }
 
     private static boolean contains(String string, char character) {
@@ -80,7 +82,6 @@ public class Main {
         for (int i = 0, x = 0; i < phrase.length() && x < correctLetters.size(); i++) {
             if (phraseArray[i] == correctLetters.get(x)) {
                 for(int y = 0; y < getAllPositions(correctLetters.get(x)).size(); y++){
-                    System.out.println("Drawing: " + phraseArray[i]);
                     int something = getAllPositions(correctLetters.get(x).toString().charAt(0)).get(y);
                     g.drawString(correctLetters.get(x).toString().toUpperCase(), ((something) * 50) + 30, 40);
                 }
@@ -151,7 +152,6 @@ public class Main {
             if (phraseArray[i] ==  letter)
                 positions.add(i);
         }
-        System.out.println(positions);
         return positions;
     }
 
