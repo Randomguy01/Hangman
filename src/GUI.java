@@ -24,8 +24,7 @@ public class GUI {
         mPanels = panels;
         mHangman = game;
         setUp();
-        drawCharacterSlots(mHangman.getPhrase());
-        System.out.println("Set up ");
+        drawCharacterSlots();
     }
 
     private void setUp() {
@@ -84,22 +83,24 @@ public class GUI {
     }
 
 
-    public void drawCharacterSlots(String phrase) {
-        Graphics g = mPanels[PHRASE_PANEL].getGraphics();
-        final char[] phraseArray = phrase.toCharArray();
+    public void drawCharacterSlots() {
+        final Graphics g = mPanels[PHRASE_PANEL].getGraphics();
+        final char[] phraseArray = mHangman.getPhrase().toCharArray();
         g.setColor(Color.WHITE);
-        for (int i = 0; i < phrase.length(); i++) {
-            if (phraseArray[i] != ' ')
+        g.drawLine(0, 0, 200, 200);
+        for (int i = 0; i < mHangman.getPhrase().length(); i++) {
+            if (phraseArray[i] != ' ') {
                 g.drawLine((i * 50) + 20, 50, (i * 50) + 50, 50);
+            }
         }
     }
 
-    private void drawCorrectLetters(String phrase, ArrayList<Character> correctLetters) {
-        Graphics g = mPanels[PHRASE_PANEL].getGraphics();
+    public void drawCorrectLetters(ArrayList<Character> correctLetters) {
+        final Graphics g = mPanels[PHRASE_PANEL].getGraphics();
         g.setColor(Color.WHITE);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 15));
-        final char[] phraseArray = phrase.toLowerCase().toCharArray();
-        for (int i = 0, x = 0; i < phrase.length() && x < correctLetters.size(); i++) {
+        final char[] phraseArray = mHangman.getPhrase().toLowerCase().toCharArray();
+        for (int i = 0, x = 0; i < mHangman.getPhrase().length() && x < correctLetters.size(); i++) {
             if (phraseArray[i] == correctLetters.get(x)) {
                 for (int y = 0; y < getAllPositions(correctLetters.get(x)).size(); y++) {
                     int something = getAllPositions(correctLetters.get(x).toString().charAt(0)).get(y);

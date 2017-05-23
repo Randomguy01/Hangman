@@ -39,7 +39,7 @@ public class Main {
         while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
-            drawCorrectLetters(mPhrasePanel.getGraphics(), mHangmanGame.getPhrase(), mHangmanGame.getCorrectLetters());
+            mGui.drawCorrectLetters(mHangmanGame.getCorrectLetters());
             if (mHangmanGame.hasWon()) {
                 showMessage(mHangmanGame.getWIN_MESSAGE());
                 break;
@@ -97,60 +97,4 @@ public class Main {
         }
         return positions;
     }
-
-    public void setUp() {
-        //Set up constraints for mPhrasePanel
-        mGridBagConstraints.gridx = 0;
-        mGridBagConstraints.gridy = 2;
-        mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 0.4;
-        mGridBagConstraints.fill = GridBagConstraints.BOTH;
-        mGridBagConstraints.gridwidth = 2;
-        //set up panel
-        mPhrasePanel.setBackground(Color.BLUE);
-        mParentPanel.add(mPhrasePanel, mGridBagConstraints);
-
-        //Set up constraints for mFigurePanel
-        mGridBagConstraints.gridx = 0;
-        mGridBagConstraints.gridy = 1;
-        mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 1.0;
-        mGridBagConstraints.fill = GridBagConstraints.BOTH;
-        mGridBagConstraints.gridwidth = 2;
-        //set up panel
-        mFigurePanel.setBackground(Color.RED);
-        mParentPanel.add(mFigurePanel, mGridBagConstraints);
-
-        //Set up constraints for mAlphabetPanel
-        mGridBagConstraints.gridx = 0;
-        mGridBagConstraints.gridy = 0;
-        mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 0.35;
-        mGridBagConstraints.fill = GridBagConstraints.BOTH;
-        mGridBagConstraints.gridwidth = 1;
-        //set up panel
-        mAlphabetPanel.setBackground(Color.GREEN);
-        mParentPanel.add(mAlphabetPanel, mGridBagConstraints);
-
-        //Set up constraints for mStatsPanel
-        mGridBagConstraints.gridx = 1;
-        mGridBagConstraints.gridy = 0;
-        mGridBagConstraints.weightx = 1.0;
-        mGridBagConstraints.weighty = 0.35;
-        mGridBagConstraints.fill = GridBagConstraints.BOTH;
-        mGridBagConstraints.gridwidth = 1;
-        //set up panel
-        mStatsPanel.setBackground(Color.MAGENTA);
-        mParentPanel.add(mStatsPanel, mGridBagConstraints);
-
-        mContainer.add(mParentPanel);
-//        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        mFrame.setSize(700, 700);
-        mFrame.setIconImage(null);//TODO: make a hangman icon image
-        mFrame.setUndecorated(false);//@Eli, we can change this later if we want to
-        mFrame.setLocationRelativeTo(null);
-        mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        mFrame.setVisible(true);
-    }
-
 }
