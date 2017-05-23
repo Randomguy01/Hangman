@@ -120,5 +120,16 @@ public class GUI {
         return positions;
     }
 
+    public void drawAlphabet() {
+        Graphics g = mPanels[ALPHABET_PANEL].getGraphics();
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 36));
+        int radix = 36;
+        for (int i = 10, row = 1; i < radix; i++) {
+            g.drawString(String.valueOf(Character.forDigit(i, radix)), (((i) % 8) * 30), (row * 20) + 20);
+            if (i % 8 == 0) {
+                row++;
+            }
+        }
+    }
 
 }
