@@ -10,20 +10,20 @@ import java.util.ArrayList;
  */
 //boogly boo boo hoo hoo
 public class Main {
+    private static final JFrame mFrame = new JFrame("Hangman");
     @SuppressWarnings("FieldCanBeLocal")
     private static Hangman mHangmanGame;
-    private static final JFrame mFrame = new JFrame("Hangman");
-    private final Container mContainer = mFrame.getContentPane();
-    private JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
+    private static GUI mGui;
+    private static JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
     private static JPanel mPhrasePanel = new JPanel(),
             mFigurePanel = new JPanel(),
             mAlphabetPanel = new JPanel(),
             mStatsPanel = new JPanel();
+    private static JPanel[] mPanels = {mParentPanel, mPhrasePanel, mFigurePanel, mAlphabetPanel, mStatsPanel};
+    private final Container mContainer = mFrame.getContentPane();
     private GridBagConstraints mGridBagConstraints = new GridBagConstraints();
 
     public static void main(String[] args) {
-        Main Main = new Main();
-        Main.setUp();
         boolean shouldPlay;
         do {
             playGame();//TODO: on restart need to clear lines and clear letters
@@ -31,13 +31,11 @@ public class Main {
                     , 'y');
         } while (shouldPlay); //TODO: Uncomment when finished ui
         mFrame.dispose();//should close frame if user does not want to play again
-
-
     }
 
     private static void playGame() {
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
-        drawCharacterSlots(mPhrasePanel.getGraphics(), mHangmanGame.getPhrase());
+        mGui = new GUI(mFrame, mPanels, mHangmanGame);
         while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
@@ -88,6 +86,16 @@ public class Main {
                 x++;
             }
         }
+    }
+
+    private static ArrayList<Integer> getAllPositions(char letter) {
+        ArrayList<Integer> positions = new ArrayList<>();
+        char[] phraseArray = mHangmanGame.getPhrase().toCharArray();
+        for (int i = 0; i < phraseArray.length; i++) {
+            if (phraseArray[i] == letter)
+                positions.add(i);
+        }
+        return positions;
     }
 
     public void setUp() {
@@ -143,16 +151,6 @@ public class Main {
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         mFrame.setVisible(true);
-    }
-
-    private static ArrayList<Integer> getAllPositions(char letter){
-        ArrayList<Integer> positions = new ArrayList<>();
-        char[] phraseArray = mHangmanGame.getPhrase().toCharArray();
-        for (int i = 0; i < phraseArray.length; i++) {
-            if (phraseArray[i] ==  letter)
-                positions.add(i);
-        }
-        return positions;
     }
 
 }

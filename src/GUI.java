@@ -24,6 +24,8 @@ public class GUI {
         mPanels = panels;
         mHangman = game;
         setUp();
+        drawCharacterSlots(mHangman.getPhrase());
+        System.out.println("Set up ");
     }
 
     private void setUp() {
@@ -92,7 +94,7 @@ public class GUI {
         }
     }
 
-    public void drawCorrectLetters(String phrase, ArrayList<Character> correctLetters) {
+    private void drawCorrectLetters(String phrase, ArrayList<Character> correctLetters) {
         Graphics g = mPanels[PHRASE_PANEL].getGraphics();
         g.setColor(Color.WHITE);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 15));
