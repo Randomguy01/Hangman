@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -29,7 +28,7 @@ class Hangman {
 
     private final ArrayList<Character> mCorrectLetters = new ArrayList<>();
 
-    public Hangman(String phrase) {
+    Hangman(String phrase) {
         mPhrase = phrase;
         mPhraseArray = mPhrase.toLowerCase().toCharArray();
         mPhraseArrayNoSpaces = removeWhite(mPhrase).toArray(new Character[removeWhite(mPhrase).size()]);
@@ -63,11 +62,7 @@ class Hangman {
 
     public String guess(char letter) {
         letter = Character.toLowerCase(letter);
-        if (hasWon()) {
-            return WIN_MESSAGE + this.getPhrase();
-        } else if (mLives < 1) {
-            return NO_LIVES_MESSAGE + this.getPhrase();
-        } else if (contains(mPhraseArrayNoSpaces, letter) && isNotGuessed(letter)) {
+        if (contains(mPhraseArrayNoSpaces, letter) && isNotGuessed(letter)) {
             mGuesses++;
             mCorrectLetters.add(letter);
             mGuessedLetters.add(letter);
@@ -110,19 +105,19 @@ class Hangman {
     }
 
     public boolean hasWon() {
-        for (int i = 0; i < mPhrase.length(); i++) {
-            if (!contains(mGuessedLetters, mPhraseArray[i])) {
+        for (int i = 0; i < mPhrase.length() - 1; i++) {
+            if (!contains(mGuessedLetters, mPhraseArrayNoSpaces[i])) {
                 return false;
             }
         }
         return true;
     }
 
-    private ArrayList<Character> removeWhite(String phrase){
+    private ArrayList<Character> removeWhite(String phrase) {
         ArrayList<Character> noSpaces = new ArrayList<>();
-        for (char character: phrase.toCharArray()){
+        for (char character : phrase.toCharArray()) {
             if (character != ' ')
-                noSpaces.add(character);
+                noSpaces.add(Character.toLowerCase(character));
         }
         return noSpaces;
     }
