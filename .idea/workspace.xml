@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d14e7b-0df6-4447-8786-ccc25e71e502" name="Default" comment="GUI Class in progress">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hangman/GUI.class" afterPath="$PROJECT_DIR$/out/production/Hangman/GUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hangman/Hangman.class" afterPath="$PROJECT_DIR$/out/production/Hangman/Hangman.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hangman/Main.class" afterPath="$PROJECT_DIR$/out/production/Hangman/Main.class" />
+    <list default="true" id="a0d14e7b-0df6-4447-8786-ccc25e71e502" name="Default" comment="Trying to fix issue with not drawing lines on frame&#10;Gui still in progress">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.java" afterPath="$PROJECT_DIR$/src/GUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="H:\LearningJavaThroughAlice\Exercises\Hangman\.idea\shelf/" />
@@ -30,17 +25,17 @@
       <file leaf-file-name="Hangman.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
+            <state relative-caret-position="618">
               <caret line="120" column="9" lean-forward="false" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="-178">
               <caret line="40" column="84" lean-forward="false" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
               <folding>
                 <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
@@ -49,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
+            <state relative-caret-position="1632">
               <caret line="98" column="14" lean-forward="false" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
               <folding />
             </state>
@@ -356,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495558988818</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Trying to fix issue with not drawing lines on frame&#10;Gui still in progress">
+      <created>1495560475020</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1495560475020</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -464,7 +466,8 @@
     <MESSAGE value="Added four panels in correct layouts" />
     <MESSAGE value="Draws lines for letters and letter when guessed" />
     <MESSAGE value="GUI Class in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI Class in progress" />
+    <MESSAGE value="Trying to fix issue with not drawing lines on frame&#10;Gui still in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix issue with not drawing lines on frame&#10;Gui still in progress" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -753,9 +756,17 @@
     <entry file="file://$PROJECT_DIR$/src/HangmanUI.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/awt/Graphics.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_91/src.zip!/java/awt/Font.java" />
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="98" column="14" lean-forward="false" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Hangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
+        <state relative-caret-position="618">
           <caret line="120" column="9" lean-forward="false" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
           <folding />
         </state>
@@ -763,19 +774,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="-178">
           <caret line="40" column="84" lean-forward="false" selection-start-line="40" selection-start-column="84" selection-end-line="40" selection-end-column="84" />
           <folding>
             <element signature="method#drawCharacterSlots#0;class#Main#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="98" column="14" lean-forward="false" selection-start-line="98" selection-start-column="14" selection-end-line="98" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
