@@ -36,6 +36,7 @@ public class Main {
     private static void playGame() {
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
         mGui = new GUI(mFrame, mPanels, mHangmanGame);
+        mGui.drawAlphabet();
         while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
