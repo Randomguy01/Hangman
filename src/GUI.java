@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
@@ -49,7 +51,7 @@ class GUI {
         //Set up constraints for mFigurePanel
         mConstraints.gridx = 2;
         mConstraints.gridy = 0;
-        mConstraints.weightx = 0.4;
+        mConstraints.weightx = 0.6;
         mConstraints.weighty = 0.7;
         mConstraints.fill = GridBagConstraints.BOTH;
         mConstraints.gridheight = 3;
@@ -61,7 +63,7 @@ class GUI {
         //Set up constraints for mAlphabetPanel
         mConstraints.gridx = 0;
         mConstraints.gridy = 0;
-        mConstraints.weightx = 0.6;
+        mConstraints.weightx = 0.4;
         mConstraints.weighty = 0.15;
         mConstraints.fill = GridBagConstraints.BOTH;
         mConstraints.gridwidth = 2;
@@ -73,7 +75,7 @@ class GUI {
         //Set up constraints for mStatsPanel
         mConstraints.gridx = 0;
         mConstraints.gridy = 1;
-        mConstraints.weightx = 0.6;
+        mConstraints.weightx = 0.4;
         mConstraints.weighty = 0.2;
         mConstraints.fill = GridBagConstraints.BOTH;
         mConstraints.gridwidth = 2;
@@ -85,7 +87,7 @@ class GUI {
         //set up constraints for mGuessPanel
         mConstraints.gridx = 0;
         mConstraints.gridy = 2;
-        mConstraints.weightx = 0.6;
+        mConstraints.weightx = 0.4;
         mConstraints.weighty = 0.25;
         mConstraints.gridwidth = 2;
         mConstraints.gridheight = 1;
@@ -118,6 +120,13 @@ class GUI {
         mGuessConstraints.weightx = 0.25;
         mGuessConstraints.weighty = 1.0;
         //set up button
+        mSubmitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mHangman.guess(mGuessField.getText().charAt(0));
+                mGuessField.setText("");
+            }
+        });
         mGuessPanel.add(mSubmitButton, mGuessConstraints);
         mPanels[PARENT_PANEL].add(mGuessPanel, mConstraints);
 

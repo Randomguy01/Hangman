@@ -71,12 +71,14 @@ class Hangman {
             mCorrectLetters.add(letter);
             mGuessedLetters.add(letter);
             mGUI.crossOutLetters(mGuessedLetters);
+            mGUI.drawCorrectLetters(getCorrectLetters());
             return CORRECT_GUESS;
         } else if (isNotGuessed(letter)) {
             mGuesses++;
             mGuessedLetters.add(letter);
             mLives--;
             mGUI.crossOutLetters(mGuessedLetters);
+            mGUI.drawCorrectLetters(getCorrectLetters());
             return INCORRECT_GUESS;
         } else {
             return DUPLICATE_GUESS + letter;
