@@ -15,7 +15,7 @@ class Hangman {
     private final String DUPLICATE_GUESS = "You have already guessed ";
     private final String NO_LIVES_MESSAGE = "Sorry, you are out of lives. The correct phrase was: ";
     private final String WIN_MESSAGE = "CORRECT! The phrase was ";
-    private String mPhrase;
+    private final String mPhrase;
     private int mGuesses = 6;
     private int mLives = 7;
     private final ArrayList<Character> mGuessedLetters = new ArrayList<>();

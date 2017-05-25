@@ -8,16 +8,16 @@ import java.util.ArrayList;
  * ${Date}
  * JDK 1.8
  */
-public class GUI {
-    public final int PARENT_PANEL = 0,
+class GUI {
+    private final int PARENT_PANEL = 0,
             PHRASE_PANEL = 1,
             FIGURE_PANEL = 2,
             ALPHABET_PANEL = 3,
             STATS_PANEL = 4;
-    private JFrame mFrame;
-    private JPanel[] mPanels;
-    private GridBagConstraints mConstraints = new GridBagConstraints();
-    private Hangman mHangman;
+    private final JFrame mFrame;
+    private final JPanel[] mPanels;
+    private final GridBagConstraints mConstraints = new GridBagConstraints();
+    private final Hangman mHangman;
 
     GUI(JFrame frame, JPanel[] panels, Hangman game) {
         mFrame = frame;
@@ -280,7 +280,7 @@ public class GUI {
         for (char letter : letters)
             positions.add(getIntFromChar(letter));
         Graphics g = mPanels[ALPHABET_PANEL].getGraphics();
-        int row = 0;
+        int row;
         for (int position : positions) {
             row = position / 8;
             g.drawLine((position * 35) + 25,//TODO: Much fixing

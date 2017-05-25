@@ -8,7 +8,7 @@ import java.awt.*;
  * Program: 
  */
 //boogly boo boo hoo hoo
-public class Main {
+class Main {
     private static final JFrame mFrame = new JFrame("Hangman");
     @SuppressWarnings("FieldCanBeLocal")
     private static Hangman mHangmanGame;
