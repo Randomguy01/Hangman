@@ -104,11 +104,9 @@ class GUI {
         final char[] phraseArray = mHangman.getPhrase().toLowerCase().toCharArray();
         for (int i = 0, x = 0; i < mHangman.getPhrase().length() && x < correctLetters.size(); i++) {
             if (phraseArray[i] == correctLetters.get(x)) {
-                System.out.println("I Correct ");
                 for (int y = 0; y < getAllPositions(correctLetters.get(x)).size(); y++) {
                     int position = getAllPositions(correctLetters.get(x).toString().charAt(0)).get(y);
                     g.drawString(correctLetters.get(x).toString().toUpperCase(), ((position) * 50) + 30, 40);
-                    System.out.println("I Draw: " + correctLetters.get(x));
                 }
                 x++;
             }
@@ -127,18 +125,6 @@ class GUI {
         return positions;
     }
 
-    @Deprecated
-    public void drawAlphabet() {
-        Graphics g = mPanels[ALPHABET_PANEL].getGraphics();
-        g.setFont(new Font("TimesRoman", Font.PLAIN, 36));
-        int radix = 36;
-        for (int i = 10, row = 1; i < radix; i++) {
-            g.drawString(String.valueOf(Character.forDigit(i, radix)), (((i) % 8) * 30), (row * 20) + 20);
-            if (i % 8 == 0) {
-                row++;
-            }
-        }
-    }//TODO: Delete
 
     public void drawTheAlphabet() {
         Graphics g = mPanels[ALPHABET_PANEL].getGraphics();
@@ -283,9 +269,10 @@ class GUI {
         int row;
         for (int position : positions) {
             row = position / 8;
-            g.drawLine((position * 35) + 25,//TODO: Much fixing
+            int x = position % 8;
+            g.drawLine((x * 35) + 25,//TODO: Much fixing
                     (row * 25) + 5,
-                    (position * 35) + 45,
+                    (x * 35) + 45,
                     (row * 25) + 25);
         }
     }

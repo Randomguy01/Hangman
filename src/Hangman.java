@@ -16,13 +16,19 @@ class Hangman {
     private final String NO_LIVES_MESSAGE = "Sorry, you are out of lives. The correct phrase was: ";
     private final String WIN_MESSAGE = "CORRECT! The phrase was ";
     private final String mPhrase;
-    private int mGuesses = 6;
-    private int mLives = 7;
     private final ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private final char[] mPhraseArray;
     private final Character[] mPhraseArrayNoSpaces;
-
+    private final ArrayList<Character> mCorrectLetters = new ArrayList<>();
+    private int mGuesses = 0;
+    private int mLives = 7;
     private GUI mGUI;
+
+    Hangman(String phrase) {
+        mPhrase = phrase;
+        mPhraseArray = mPhrase.toLowerCase().toCharArray();
+        mPhraseArrayNoSpaces = removeWhite(mPhrase).toArray(new Character[removeWhite(mPhrase).size()]);
+    }
 
     public void setGUI(GUI GUI) {
         mGUI = GUI;
@@ -30,14 +36,6 @@ class Hangman {
 
     public ArrayList<Character> getCorrectLetters() {
         return mCorrectLetters;
-    }
-
-    private final ArrayList<Character> mCorrectLetters = new ArrayList<>();
-
-    Hangman(String phrase) {
-        mPhrase = phrase;
-        mPhraseArray = mPhrase.toLowerCase().toCharArray();
-        mPhraseArrayNoSpaces = removeWhite(mPhrase).toArray(new Character[removeWhite(mPhrase).size()]);
     }
 
     @SuppressWarnings("WeakerAccess")
@@ -68,6 +66,7 @@ class Hangman {
 
     public String guess(char letter) {
         letter = Character.toLowerCase(letter);
+        mGuesses++;
         if (contains(mPhraseArrayNoSpaces, letter) && isNotGuessed(letter)) {
             mGuesses++;
             mCorrectLetters.add(letter);
