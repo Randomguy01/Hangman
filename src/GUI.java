@@ -82,27 +82,45 @@ class GUI {
         mPanels[STATS_PANEL].setBackground(Color.MAGENTA);
         mPanels[PARENT_PANEL].add(mPanels[STATS_PANEL], mConstraints);
 
-        //set up constraints for mGuessField
+        //set up constraints for mGuessPanel
         mConstraints.gridx = 0;
         mConstraints.gridy = 2;
         mConstraints.weightx = 0.6;
         mConstraints.weighty = 0.25;
         mConstraints.gridwidth = 2;
         mConstraints.gridheight = 1;
-        //set up field
-
-        //set up constraints for mGuessText
+        /* ********************************* Set up Guess Panel Constraints **************************************** */
+        //set up constraints for mGuessLabel
         mGuessConstraints.gridx = 0;
         mGuessConstraints.gridy = 0;
-        mGuessConstraints.fill = GridBagConstraints.BOTH;
-        mGuessConstraints.gridwidth = 2;
+        mGuessConstraints.fill = GridBagConstraints.NONE;
+        mGuessConstraints.gridwidth = 1;
         mGuessConstraints.gridheight = 1;
-
+        mGuessConstraints.weightx = 1.0;
+        mGuessConstraints.weighty = 1.0;
+        //set up panel
         mGuessLabel.setText("Enter a guess: ");
         mGuessPanel.add(mGuessLabel, mGuessConstraints);
 
+        //set up constraints for mGuessField
+        mGuessConstraints.gridx = 0;
+        mGuessConstraints.gridy = 1;
+        mGuessConstraints.fill = GridBagConstraints.HORIZONTAL;
+        mGuessConstraints.weightx = 1.0;
+        mGuessConstraints.weighty = 1.0;
+        //set up field
+        mGuessPanel.add(mGuessField, mGuessConstraints);
 
+        //set up constraints for mSubmitButton
+        mGuessConstraints.gridx = 0;
+        mGuessConstraints.gridy = 2;
+        mGuessConstraints.fill = GridBagConstraints.NONE;
+        mGuessConstraints.weightx = 0.25;
+        mGuessConstraints.weighty = 1.0;
+        //set up button
+        mGuessPanel.add(mSubmitButton, mGuessConstraints);
         mPanels[PARENT_PANEL].add(mGuessPanel, mConstraints);
+
         mFrame.add(mPanels[PARENT_PANEL]);
 //        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         mFrame.setSize(700, 700);
