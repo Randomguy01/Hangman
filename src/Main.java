@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
 
 /*
  * Ian White
@@ -20,8 +19,6 @@ public class Main {
             mAlphabetPanel = new JPanel(),
             mStatsPanel = new JPanel();
     private static JPanel[] mPanels = {mParentPanel, mPhrasePanel, mFigurePanel, mAlphabetPanel, mStatsPanel};
-    private final Container mContainer = mFrame.getContentPane();
-    private GridBagConstraints mGridBagConstraints = new GridBagConstraints();
 
     public static void main(String[] args) {
         boolean shouldPlay;
@@ -36,7 +33,7 @@ public class Main {
     private static void playGame() {
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
         mGui = new GUI(mFrame, mPanels, mHangmanGame);
-        mGui.drawAlphabet();
+        mHangmanGame.setGUI(mGui);
         while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
@@ -63,39 +60,5 @@ public class Main {
 
     private static void showMessage(String message) {
         JOptionPane.showMessageDialog(null, message);
-    }
-
-    private static void drawCharacterSlots(Graphics g, String phrase) {
-        final char[] phraseArray = phrase.toCharArray();
-        g.setColor(Color.WHITE);
-        for (int i = 0; i < phrase.length(); i++) {
-            if (phraseArray[i] != ' ')
-                g.drawLine((i * 50) + 20, 50, (i * 50) + 50, 50);
-        }
-    }
-
-    private static void drawCorrectLetters(Graphics g, String phrase, ArrayList<Character> correctLetters) {
-        g.setColor(Color.WHITE);
-        g.setFont(new Font("TimesRoman", Font.PLAIN, 15));
-        final char[] phraseArray = phrase.toLowerCase().toCharArray();
-        for (int i = 0, x = 0; i < phrase.length() && x < correctLetters.size(); i++) {
-            if (phraseArray[i] == correctLetters.get(x)) {
-                for(int y = 0; y < getAllPositions(correctLetters.get(x)).size(); y++){
-                    int something = getAllPositions(correctLetters.get(x).toString().charAt(0)).get(y);
-                    g.drawString(correctLetters.get(x).toString().toUpperCase(), ((something) * 50) + 30, 40);
-                }
-                x++;
-            }
-        }
-    }
-
-    private static ArrayList<Integer> getAllPositions(char letter) {
-        ArrayList<Integer> positions = new ArrayList<>();
-        char[] phraseArray = mHangmanGame.getPhrase().toCharArray();
-        for (int i = 0; i < phraseArray.length; i++) {
-            if (phraseArray[i] == letter)
-                positions.add(i);
-        }
-        return positions;
     }
 }
