@@ -15,12 +15,18 @@ class Hangman {
     private final String DUPLICATE_GUESS = "You have already guessed ";
     private final String NO_LIVES_MESSAGE = "Sorry, you are out of lives. The correct phrase was: ";
     private final String WIN_MESSAGE = "CORRECT! The phrase was ";
-    private String mPhrase;
+    private final String mPhrase;
     private int mGuesses = 6;
     private int mLives = 7;
     private final ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private final char[] mPhraseArray;
     private final Character[] mPhraseArrayNoSpaces;
+
+    private GUI mGUI;
+
+    public void setGUI(GUI GUI) {
+        mGUI = GUI;
+    }
 
     public ArrayList<Character> getCorrectLetters() {
         return mCorrectLetters;
@@ -66,11 +72,13 @@ class Hangman {
             mGuesses++;
             mCorrectLetters.add(letter);
             mGuessedLetters.add(letter);
+            mGUI.crossOutLetters(mGuessedLetters);
             return CORRECT_GUESS;
         } else if (isNotGuessed(letter)) {
             mGuesses++;
             mGuessedLetters.add(letter);
             mLives--;
+            mGUI.crossOutLetters(mGuessedLetters);
             return INCORRECT_GUESS;
         } else {
             return DUPLICATE_GUESS + letter;
