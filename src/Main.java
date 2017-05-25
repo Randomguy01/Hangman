@@ -38,6 +38,7 @@ class Main {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
             mGui.drawCorrectLetters(mHangmanGame.getCorrectLetters());
+            mGui.drawHangman(mHangmanGame.getLives());
             if (mHangmanGame.hasWon()) {
                 showMessage(mHangmanGame.getWIN_MESSAGE());
                 break;

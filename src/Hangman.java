@@ -66,7 +66,6 @@ class Hangman {
 
     public String guess(char letter) {
         letter = Character.toLowerCase(letter);
-        mGuesses++;
         if (contains(mPhraseArrayNoSpaces, letter) && isNotGuessed(letter)) {
             mGuesses++;
             mCorrectLetters.add(letter);

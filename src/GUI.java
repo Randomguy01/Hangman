@@ -17,7 +17,12 @@ class GUI {
     private final JFrame mFrame;
     private final JPanel[] mPanels;
     private final GridBagConstraints mConstraints = new GridBagConstraints();
+    private final GridBagConstraints mGuessConstraints = new GridBagConstraints();
     private final Hangman mHangman;
+    private final JPanel mGuessPanel = new JPanel(new GridBagLayout());
+    private final JTextField mGuessField = new JTextField();
+    private final JLabel mGuessLabel = new JLabel("Enter a guess");
+    private final JButton mSubmitButton = new JButton("Submit");
 
     GUI(JFrame frame, JPanel[] panels, Hangman game) {
         mFrame = frame;
@@ -31,22 +36,24 @@ class GUI {
     private void setUp() {
         //Set up constraints for mPhrasePanel
         mConstraints.gridx = 0;
-        mConstraints.gridy = 2;
+        mConstraints.gridy = 3;//Might need to be 3
         mConstraints.weightx = 1.0;
-        mConstraints.weighty = 0.4;
+        mConstraints.weighty = 0.3;
         mConstraints.fill = GridBagConstraints.BOTH;
-        mConstraints.gridwidth = 2;
+        mConstraints.gridwidth = 3;
+        mConstraints.gridheight = 1;
         //set up panel
         mPanels[PHRASE_PANEL].setBackground(Color.BLUE);
         mPanels[PARENT_PANEL].add(mPanels[PHRASE_PANEL], mConstraints);
 
         //Set up constraints for mFigurePanel
-        mConstraints.gridx = 0;
-        mConstraints.gridy = 1;
-        mConstraints.weightx = 1.0;
-        mConstraints.weighty = 1.0;
+        mConstraints.gridx = 2;
+        mConstraints.gridy = 0;
+        mConstraints.weightx = 0.4;
+        mConstraints.weighty = 0.7;
         mConstraints.fill = GridBagConstraints.BOTH;
-        mConstraints.gridwidth = 2;
+        mConstraints.gridheight = 3;
+        mConstraints.gridwidth = 1;
         //set up panel
         mPanels[FIGURE_PANEL].setBackground(Color.RED);
         mPanels[PARENT_PANEL].add(mPanels[FIGURE_PANEL], mConstraints);
@@ -54,25 +61,48 @@ class GUI {
         //Set up constraints for mAlphabetPanel
         mConstraints.gridx = 0;
         mConstraints.gridy = 0;
-        mConstraints.weightx = 1.0;
-        mConstraints.weighty = 0.35;
+        mConstraints.weightx = 0.6;
+        mConstraints.weighty = 0.15;
         mConstraints.fill = GridBagConstraints.BOTH;
-        mConstraints.gridwidth = 1;
+        mConstraints.gridwidth = 2;
+        mConstraints.gridheight = 1;
         //set up panel
         mPanels[ALPHABET_PANEL].setBackground(Color.GREEN);
         mPanels[PARENT_PANEL].add(mPanels[ALPHABET_PANEL], mConstraints);
 
         //Set up constraints for mStatsPanel
-        mConstraints.gridx = 1;
-        mConstraints.gridy = 0;
-        mConstraints.weightx = 1.0;
-        mConstraints.weighty = 0.35;
+        mConstraints.gridx = 0;
+        mConstraints.gridy = 1;
+        mConstraints.weightx = 0.6;
+        mConstraints.weighty = 0.2;
         mConstraints.fill = GridBagConstraints.BOTH;
-        mConstraints.gridwidth = 1;
+        mConstraints.gridwidth = 2;
+        mConstraints.gridheight = 1;
         //set up panel
         mPanels[STATS_PANEL].setBackground(Color.MAGENTA);
         mPanels[PARENT_PANEL].add(mPanels[STATS_PANEL], mConstraints);
 
+        //set up constraints for mGuessField
+        mConstraints.gridx = 0;
+        mConstraints.gridy = 2;
+        mConstraints.weightx = 0.6;
+        mConstraints.weighty = 0.25;
+        mConstraints.gridwidth = 2;
+        mConstraints.gridheight = 1;
+        //set up field
+
+        //set up constraints for mGuessText
+        mGuessConstraints.gridx = 0;
+        mGuessConstraints.gridy = 0;
+        mGuessConstraints.fill = GridBagConstraints.BOTH;
+        mGuessConstraints.gridwidth = 2;
+        mGuessConstraints.gridheight = 1;
+
+        mGuessLabel.setText("Enter a guess: ");
+        mGuessPanel.add(mGuessLabel, mGuessConstraints);
+
+
+        mPanels[PARENT_PANEL].add(mGuessPanel, mConstraints);
         mFrame.add(mPanels[PARENT_PANEL]);
 //        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         mFrame.setSize(700, 700);
@@ -260,7 +290,6 @@ class GUI {
         }
     }
 
-
     public void crossOutLetters(ArrayList<Character> letters) {
         ArrayList<Integer> positions = new ArrayList<>();
         for (char letter : letters)
@@ -277,4 +306,13 @@ class GUI {
         }
     }
 
+    public void drawHangman(int lives) {
+        Graphics g = mPanels[FIGURE_PANEL].getGraphics();
+
+        switch (lives) {
+            case 0:
+        }
+
+        mPanels[FIGURE_PANEL].validate();
+    }
 }
