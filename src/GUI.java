@@ -33,6 +33,7 @@ class GUI {
         setUp();
         drawTheAlphabet();
         drawCharacterSlots();
+        drawStats();
     }
 
     private void setUp() {
@@ -333,6 +334,16 @@ class GUI {
         }
     }
 
+    public void drawStats() {
+        mPanels[STATS_PANEL].invalidate();
+        Graphics g = mPanels[STATS_PANEL].getGraphics();
+        mPanels[STATS_PANEL].update(g);
+        g.setFont(new Font("TimesRoman", Font.PLAIN, 25));
+        g.setColor(Color.BLACK);
+        g.drawString("Lives: " + mHangman.getLives(), 20, 40);
+        g.drawString("Guesses: " + mHangman.getGuesses(), 20, 80);
+        mPanels[STATS_PANEL].validate();
+    }
     public void drawHangman(int lives) {
         Graphics g = mPanels[FIGURE_PANEL].getGraphics();
 
