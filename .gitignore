@@ -138,6 +138,7 @@ local.properties
 
 # IntelliJ
 /out/
+/.idea/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -151,3 +152,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 .idea/workspace.xml
+.idea/compiler.xml
+.idea/copyright/
+.idea/shelf/Uncommitted_changes_before_Update_at_5_22_2017_11_32_AM__Default_.xml
