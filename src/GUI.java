@@ -15,20 +15,31 @@ class GUI {
             PHRASE_PANEL = 1,
             FIGURE_PANEL = 2,
             ALPHABET_PANEL = 3,
-            STATS_PANEL = 4;
-    private final JFrame mFrame;
-    private final JPanel[] mPanels;
+            STATS_PANEL = 4,
+            GUESS_PANEL = 5;
+    private final int LIVES_LABEL = 0,
+            GUESSES_LABEL = 1;
+    private final JPanel[] mPanels =
+            {new JPanel(new GridBagLayout()),
+                    new JPanel(),
+                    new JPanel(),
+                    new JPanel(),
+                    new JPanel(new GridBagLayout()),
+                    new JPanel(new GridBagLayout())};
+    private final JLabel[] mStatsLabels =
+            {new JLabel("Lives: "),
+                    new JLabel("Guesses: ")};
     private final GridBagConstraints mConstraints = new GridBagConstraints();
     private final GridBagConstraints mGuessConstraints = new GridBagConstraints();
+    private final JFrame mFrame;
     private final Hangman mHangman;
-    private final JPanel mGuessPanel = new JPanel(new GridBagLayout());
     private final JTextField mGuessField = new JTextField();
     private final JLabel mGuessLabel = new JLabel("Enter a guess");
     private final JButton mSubmitButton = new JButton("Submit");
 
-    GUI(JFrame frame, JPanel[] panels, Hangman game) {
+
+    GUI(JFrame frame, Hangman game) {
         mFrame = frame;
-        mPanels = panels;
         mHangman = game;
         setUp();
         drawTheAlphabet();
@@ -41,7 +52,7 @@ class GUI {
         mConstraints.gridx = 0;
         mConstraints.gridy = 3;//Might need to be 3
         mConstraints.weightx = 1.0;
-        mConstraints.weighty = 0.3;
+        mConstraints.weighty = 0.2;
         mConstraints.fill = GridBagConstraints.BOTH;
         mConstraints.gridwidth = 3;
         mConstraints.gridheight = 1;
@@ -53,7 +64,7 @@ class GUI {
         mConstraints.gridx = 2;
         mConstraints.gridy = 0;
         mConstraints.weightx = 0.6;
-        mConstraints.weighty = 0.7;
+        mConstraints.weighty = 0.8;
         mConstraints.fill = GridBagConstraints.BOTH;
         mConstraints.gridheight = 3;
         mConstraints.gridwidth = 1;
@@ -65,7 +76,7 @@ class GUI {
         mConstraints.gridx = 0;
         mConstraints.gridy = 0;
         mConstraints.weightx = 0.4;
-        mConstraints.weighty = 0.15;
+        mConstraints.weighty = 0.2;
         mConstraints.fill = GridBagConstraints.BOTH;
         mConstraints.gridwidth = 2;
         mConstraints.gridheight = 1;
@@ -77,11 +88,13 @@ class GUI {
         mConstraints.gridx = 0;
         mConstraints.gridy = 1;
         mConstraints.weightx = 0.4;
-        mConstraints.weighty = 0.2;
+        mConstraints.weighty = 0.25;
         mConstraints.fill = GridBagConstraints.BOTH;
         mConstraints.gridwidth = 2;
         mConstraints.gridheight = 1;
-        //set up panel
+        /* ********************************* Set up Stats Panel Constraints **************************************** */
+
+
         mPanels[STATS_PANEL].setBackground(Color.MAGENTA);
         mPanels[PARENT_PANEL].add(mPanels[STATS_PANEL], mConstraints);
 
@@ -103,16 +116,17 @@ class GUI {
         mGuessConstraints.weighty = 1.0;
         //set up panel
         mGuessLabel.setText("Enter a guess: ");
-        mGuessPanel.add(mGuessLabel, mGuessConstraints);
+        mPanels[GUESS_PANEL].add(mGuessLabel, mGuessConstraints);
 
         //set up constraints for mGuessField
         mGuessConstraints.gridx = 0;
         mGuessConstraints.gridy = 1;
         mGuessConstraints.fill = GridBagConstraints.HORIZONTAL;
+        mGuessConstraints.insets = new Insets(0, 20, 0, 20);
         mGuessConstraints.weightx = 1.0;
         mGuessConstraints.weighty = 1.0;
         //set up field
-        mGuessPanel.add(mGuessField, mGuessConstraints);
+        mPanels[GUESS_PANEL].add(mGuessField, mGuessConstraints);
 
         //set up constraints for mSubmitButton
         mGuessConstraints.gridx = 0;
@@ -121,19 +135,17 @@ class GUI {
         mGuessConstraints.weightx = 0.25;
         mGuessConstraints.weighty = 1.0;
         //set up button
-        mSubmitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                mHangman.guess(mGuessField.getText().charAt(0));
-                mGuessField.setText("");
-            }
+        mGuessConstraints.insets = new Insets(0, 0, 0, 0);
+        mSubmitButton.addActionListener(e -> {
+            mHangman.guess(mGuessField.getText().charAt(0));
+            mGuessField.setText("");
         });
-        mGuessPanel.add(mSubmitButton, mGuessConstraints);
-        mPanels[PARENT_PANEL].add(mGuessPanel, mConstraints);
+        mPanels[GUESS_PANEL].add(mSubmitButton, mGuessConstraints);
+        mPanels[PARENT_PANEL].add(mPanels[GUESS_PANEL], mConstraints);
 
         mFrame.add(mPanels[PARENT_PANEL]);
 //        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        mFrame.setSize(700, 700);
+        mFrame.setSize(1024, 768);
         mFrame.setIconImage(null);//TODO: make a hangman icon image
         mFrame.setUndecorated(false);//@Eli, we can change this later if we want to
         mFrame.setLocationRelativeTo(null);
@@ -334,6 +346,7 @@ class GUI {
         }
     }
 
+    @Deprecated
     public void drawStats() {
         mPanels[STATS_PANEL].invalidate();
         Graphics g = mPanels[STATS_PANEL].getGraphics();
@@ -344,6 +357,7 @@ class GUI {
         g.drawString("Guesses: " + mHangman.getGuesses(), 20, 80);
         mPanels[STATS_PANEL].validate();
     }
+
     public void drawHangman(int lives) {
         Graphics g = mPanels[FIGURE_PANEL].getGraphics();
 
@@ -352,5 +366,9 @@ class GUI {
         }
 
         mPanels[FIGURE_PANEL].validate();
+    }
+
+    public void updateStats(int lives, int guesses) {
+
     }
 }

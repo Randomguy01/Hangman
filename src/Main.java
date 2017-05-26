@@ -13,12 +13,6 @@ class Main {
     @SuppressWarnings("FieldCanBeLocal")
     private static Hangman mHangmanGame;
     private static GUI mGui;
-    private static JPanel mParentPanel = new JPanel(new GridBagLayout());//Main Panel to hold all subpanels
-    private static JPanel mPhrasePanel = new JPanel(),
-            mFigurePanel = new JPanel(),
-            mAlphabetPanel = new JPanel(),
-            mStatsPanel = new JPanel();
-    private static JPanel[] mPanels = {mParentPanel, mPhrasePanel, mFigurePanel, mAlphabetPanel, mStatsPanel};
 
     public static void main(String[] args) {
         boolean shouldPlay;
@@ -32,7 +26,7 @@ class Main {
 
     private static void playGame() {
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
-        mGui = new GUI(mFrame, mPanels, mHangmanGame);
+        mGui = new GUI(mFrame, mHangmanGame);
         mHangmanGame.setGUI(mGui);
         while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
