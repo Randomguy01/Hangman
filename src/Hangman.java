@@ -21,7 +21,7 @@ class Hangman {
     private final Character[] mPhraseArrayNoSpaces;
     private final ArrayList<Character> mCorrectLetters = new ArrayList<>();
     private int mGuesses = 0;
-    private int mLives = 7;
+    private int mLives = 9;
     private GUI mGUI;
 
     Hangman(String phrase) {

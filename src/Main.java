@@ -17,23 +17,23 @@ class Main {
         boolean shouldPlay;
         do {
             playGame();//TODO: on restart need to clear lines and clear letters
-            /*shouldPlay = contains(JOptionPane.showInputDialog(null, "Do you want to play again")
-                    , 'y');*/
-        } while (false); //TODO: Uncomment when finished ui
-        //mFrame.dispose();//should close frame if user does not want to play again
+            shouldPlay = contains(JOptionPane.showInputDialog(null, "Do you want to play again")
+                    , 'y');
+        } while (shouldPlay); //TODO: Uncomment when finished ui
+        mFrame.dispose();//should close frame if user does not want to play again
     }
 
     private static void playGame() {
         mHangmanGame = new Hangman(JOptionPane.showInputDialog(null, "Enter phrase: "));
         mGui = new GUI(mFrame, mHangmanGame);
         mHangmanGame.setGUI(mGui);
-        //mGui.drawHangman(0);
-        while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon() && false) {
+        while (mHangmanGame.getLives() > 0 && !mHangmanGame.hasWon()) {
             showMessage(mHangmanGame.guess(JOptionPane.showInputDialog(null, "Enter a guess").charAt(0))
                     + "\nYou have " + mHangmanGame.getLives() + " lives remaining");
 
             mGui.drawCorrectLetters(mHangmanGame.getCorrectLetters());
             mGui.drawStats();
+            mGui.drawHangman(mHangmanGame.getLives());
             if (mHangmanGame.hasWon()) {
                 showMessage(mHangmanGame.getWIN_MESSAGE());
                 break;

@@ -1,3 +1,5 @@
+import com.sun.istack.internal.NotNull;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -34,16 +36,24 @@ class GUI {
     private final JTextField mGuessField = new JTextField();
     private final JLabel mGuessLabel = new JLabel("Enter a guess");
     private final JButton mSubmitButton = new JButton("Submit");
+    private final int BOTTOM_POST = 0,
+            MIDDLE_POST = 1,
+            TOP_POST = 2,
+            HEAD = 3,
+            BODY = 4,
+            LEFT_ARM = 5,
+            RIGHT_ARM = 6,
+            LEFT_LEG = 7,
+            RIGHT_LEG = 8;
 
 
-    GUI(JFrame frame, Hangman game) {
+    public GUI(JFrame frame, Hangman game) {
         mFrame = frame;
         mHangman = game;
         setUp();
         drawTheAlphabet();
         drawCharacterSlots();
         drawStats();
-        drawHangman(0);
     }
 
     private void setUp() {
@@ -152,7 +162,6 @@ class GUI {
         mFrame.setVisible(true);
     }
 
-
     public void drawCharacterSlots() {
         Graphics g = mPanels[PHRASE_PANEL].getGraphics();
         char[] phraseArray = mHangman.getPhrase().toCharArray();
@@ -193,7 +202,6 @@ class GUI {
         }
         return positions;
     }
-
 
     public void drawTheAlphabet() {
         Graphics g = mPanels[ALPHABET_PANEL].getGraphics();
@@ -362,10 +370,38 @@ class GUI {
         Graphics g = mPanels[FIGURE_PANEL].getGraphics();
         Graphics2D g2d = (Graphics2D) g;
         mPanels[FIGURE_PANEL].update(g);
-        //g2d.setStroke();
+
         g.setColor(Color.BLACK);
-        g.drawLine(0, 0, 780, 819);
-        g.drawLine(275, 580, 500, 580);
+        System.out.println(lives);
+        switch (lives) {
+            case 0:
+                g2d.setStroke(new BasicStroke(3));
+                drawFigurePart(RIGHT_LEG, g2d);
+            case 1:
+                g2d.setStroke(new BasicStroke(3));
+                drawFigurePart(LEFT_LEG, g2d);
+            case 2:
+                g2d.setStroke(new BasicStroke(3));
+                drawFigurePart(RIGHT_ARM, g2d);
+            case 3:
+                g2d.setStroke(new BasicStroke(3));
+                drawFigurePart(LEFT_ARM, g2d);
+            case 4:
+                g2d.setStroke(new BasicStroke(3));
+                drawFigurePart(BODY, g2d);
+            case 5:
+                g2d.setStroke(new BasicStroke(3));
+                drawFigurePart(HEAD, g2d);
+            case 6:
+                g2d.setStroke(new BasicStroke(5));
+                drawFigurePart(TOP_POST, g2d);
+            case 7:
+                g2d.setStroke(new BasicStroke(5));
+                drawFigurePart(MIDDLE_POST, g2d);
+            case 8:
+                g2d.setStroke(new BasicStroke(5));
+                drawFigurePart(BOTTOM_POST, g2d);
+        }
 
         mPanels[FIGURE_PANEL].validate();
     }
@@ -373,4 +409,38 @@ class GUI {
     public void updateStats(int lives, int guesses) {
 
     }
+
+    private void drawFigurePart(@NotNull int part, Graphics2D g) {
+        switch (part) {
+            case BOTTOM_POST:
+                g.drawLine(275, 580, 500, 580);
+                break;
+            case MIDDLE_POST:
+                g.drawLine(387, 580, 387, 100);
+                break;
+            case TOP_POST:
+                g.drawLine(387, 100, 225, 100);
+                g.drawLine(225, 100, 225, 125);
+                break;
+            case HEAD:
+                g.drawOval(187, 125, 75, 75);
+                break;
+            case BODY:
+                g.drawLine(225, 200, 225, 375);
+                break;
+            case LEFT_ARM:
+                g.drawLine(225, 250, 150, 175);
+                break;
+            case RIGHT_ARM:
+                g.drawLine(225, 250, 300, 175);
+                break;
+            case LEFT_LEG:
+                g.drawLine(225, 375, 145, 455);
+                break;
+            case RIGHT_LEG:
+                g.drawLine(225, 375, 305, 455);
+                break;
+        }
+    }
+
 }
