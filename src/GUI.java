@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /**
@@ -45,6 +43,7 @@ class GUI {
         drawTheAlphabet();
         drawCharacterSlots();
         drawStats();
+        drawHangman(0);
     }
 
     private void setUp() {
@@ -359,11 +358,14 @@ class GUI {
     }
 
     public void drawHangman(int lives) {
+        mPanels[FIGURE_PANEL].invalidate();
         Graphics g = mPanels[FIGURE_PANEL].getGraphics();
-
-        switch (lives) {
-            case 0:
-        }
+        Graphics2D g2d = (Graphics2D) g;
+        mPanels[FIGURE_PANEL].update(g);
+        //g2d.setStroke();
+        g.setColor(Color.BLACK);
+        g.drawLine(0, 0, 780, 819);
+        g.drawLine(275, 580, 500, 580);
 
         mPanels[FIGURE_PANEL].validate();
     }
