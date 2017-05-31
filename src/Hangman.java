@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 /**
  * Ian White
- * Program:
- * ${Date}
+ * Program: Class keeps stats and information to run game up to date
+ * 5/15/17
  * JDK 1.8
  */
 class Hangman {
@@ -73,10 +73,6 @@ class Hangman {
 
     public String getNO_LIVES_MESSAGE() {
         return NO_LIVES_MESSAGE + mPhrase + "<html>";
-    }
-
-    public ArrayList<Character> getGuessedLetters() {
-        return mGuessedLetters;
     }
 
     //method takes user entered char and returns String message

@@ -28,21 +28,21 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="28" column="56" lean-forward="false" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+            <state relative-caret-position="102">
+              <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
               <folding>
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#366#367#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="502" column="97" lean-forward="false" selection-start-line="502" selection-start-column="97" selection-end-line="502" selection-end-column="97" />
+            <state relative-caret-position="136">
+              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#setUp#0;class#GUI#0" expanded="false" />
@@ -54,20 +54,20 @@
                 <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
                 <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
                 <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-                <element signature="e#18809#18810#0" expanded="true" />
-                <element signature="e#18852#18853#0" expanded="true" />
-                <element signature="e#18977#18978#0" expanded="true" />
-                <element signature="e#19009#19010#0" expanded="true" />
+                <element signature="e#18837#18838#0" expanded="true" />
+                <element signature="e#18880#18881#0" expanded="true" />
+                <element signature="e#19005#19006#0" expanded="true" />
+                <element signature="e#19037#19038#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hangman.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hangman.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="163" column="61" lean-forward="false" selection-start-line="163" selection-start-column="61" selection-end-line="163" selection-end-column="61" />
+            <state relative-caret-position="85">
+              <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
@@ -121,8 +121,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/OnWinListener.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Hangman.java" />
         <option value="$PROJECT_DIR$/src/GUI.java" />
+        <option value="$PROJECT_DIR$/src/Hangman.java" />
       </list>
     </option>
   </component>
@@ -450,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496231868011</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Finished comments">
+      <created>1496234498200</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1496234498200</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -480,6 +487,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21048632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -492,9 +501,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -571,7 +578,8 @@
     <MESSAGE value="Stuff" />
     <MESSAGE value="program now draws hangman figures based on number of lives" />
     <MESSAGE value="Finished Game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Game" />
+    <MESSAGE value="Finished comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished comments" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -603,8 +611,8 @@
         <state relative-caret-position="544">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -624,10 +632,10 @@
             <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
             <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
             <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-            <element signature="e#18809#18810#0" expanded="true" />
-            <element signature="e#18852#18853#0" expanded="true" />
-            <element signature="e#18977#18978#0" expanded="true" />
-            <element signature="e#19009#19010#0" expanded="true" />
+            <element signature="e#18837#18838#0" expanded="true" />
+            <element signature="e#18880#18881#0" expanded="true" />
+            <element signature="e#19005#19006#0" expanded="true" />
+            <element signature="e#19037#19038#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -648,8 +656,8 @@
         <state relative-caret-position="578">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -669,10 +677,10 @@
             <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
             <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
             <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-            <element signature="e#18809#18810#0" expanded="true" />
-            <element signature="e#18852#18853#0" expanded="true" />
-            <element signature="e#18977#18978#0" expanded="true" />
-            <element signature="e#19009#19010#0" expanded="true" />
+            <element signature="e#18837#18838#0" expanded="true" />
+            <element signature="e#18880#18881#0" expanded="true" />
+            <element signature="e#19005#19006#0" expanded="true" />
+            <element signature="e#19037#19038#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -693,8 +701,8 @@
         <state relative-caret-position="1122">
           <caret line="77" column="124" lean-forward="false" selection-start-line="77" selection-start-column="124" selection-end-line="77" selection-end-column="124" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,8 +723,8 @@
         <state relative-caret-position="2125">
           <caret line="125" column="27" lean-forward="false" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -737,8 +745,8 @@
         <state relative-caret-position="1122">
           <caret line="85" column="36" lean-forward="false" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -766,8 +774,8 @@
         <state relative-caret-position="238">
           <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,8 +796,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -810,8 +818,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -839,8 +847,8 @@
         <state relative-caret-position="306">
           <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -857,8 +865,8 @@
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -886,8 +894,8 @@
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1008,30 +1016,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" column="56" lean-forward="false" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        <state relative-caret-position="102">
+          <caret line="6" column="55" lean-forward="false" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hangman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="163" column="61" lean-forward="false" selection-start-line="163" selection-start-column="61" selection-end-line="163" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="502" column="97" lean-forward="false" selection-start-line="502" selection-start-column="97" selection-end-line="502" selection-end-column="97" />
+        <state relative-caret-position="136">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#setUp#0;class#GUI#0" expanded="false" />
@@ -1043,10 +1040,21 @@
             <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
             <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
             <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-            <element signature="e#18809#18810#0" expanded="true" />
-            <element signature="e#18852#18853#0" expanded="true" />
-            <element signature="e#18977#18978#0" expanded="true" />
-            <element signature="e#19009#19010#0" expanded="true" />
+            <element signature="e#18837#18838#0" expanded="true" />
+            <element signature="e#18880#18881#0" expanded="true" />
+            <element signature="e#19005#19006#0" expanded="true" />
+            <element signature="e#19037#19038#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hangman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="68" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>

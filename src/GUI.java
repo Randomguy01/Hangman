@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 /**
  * Ian White
- * Program:
- * ${Date}
+ * Program: Class keeps the GUI updated
+ * 5/15/17
  * JDK 1.8
  */
 class GUI {

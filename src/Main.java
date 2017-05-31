@@ -4,7 +4,7 @@ import javax.swing.*;
  * Ian White
  * 5/15/2017
  * JDK 1.8
- * Program: 
+ * Program: Main class to use other objects to run game
  */
 //boogly boo boo hoo hoo
 class Main {
