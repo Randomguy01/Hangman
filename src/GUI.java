@@ -22,7 +22,7 @@ class GUI {
     private final JPanel[] mPanels =
             {new JPanel(new GridBagLayout()),
                     new JPanel(),
-                    new JPanel(),
+                    new JPanel(new GridBagLayout()),
                     new JPanel(),
                     new JPanel(new GridBagLayout()),
                     new JPanel(new GridBagLayout())};
@@ -31,10 +31,13 @@ class GUI {
                     new JLabel("Guesses: ")};
     private final GridBagConstraints mConstraints = new GridBagConstraints();
     private final GridBagConstraints mGuessConstraints = new GridBagConstraints();
+    private final GridBagConstraints mFigureConstraints = new GridBagConstraints();
+    private final GridBagConstraints mStatsConstraints = new GridBagConstraints();
     private final JFrame mFrame;
     private final Hangman mHangman;
     private final JTextField mGuessField = new JTextField();
-    private final JLabel mGuessLabel = new JLabel("Enter a guess");
+    private final JLabel mGuessLabel = new JLabel("<html>Enter a guess<br>NOTE: if more than one letter is submitted," +
+            "<br>only the first letter will count");
     private final JButton mSubmitButton = new JButton("Submit");
     private final int BOTTOM_POST = 0,
             MIDDLE_POST = 1,
@@ -45,15 +48,16 @@ class GUI {
             RIGHT_ARM = 6,
             LEFT_LEG = 7,
             RIGHT_LEG = 8;
+    private final JLabel mInfoLabel = new JLabel("Enter a guess: ");
 
 
     public GUI(JFrame frame, Hangman game) {
         mFrame = frame;
         mHangman = game;
         setUp();
-        drawTheAlphabet();
+        updateStats();
         drawCharacterSlots();
-        drawStats();
+        drawTheAlphabet();
     }
 
     private void setUp() {
@@ -66,7 +70,7 @@ class GUI {
         mConstraints.gridwidth = 3;
         mConstraints.gridheight = 1;
         //set up panel
-        mPanels[PHRASE_PANEL].setBackground(Color.BLUE);
+        mPanels[PHRASE_PANEL].setBackground(Color.WHITE);
         mPanels[PARENT_PANEL].add(mPanels[PHRASE_PANEL], mConstraints);
 
         //Set up constraints for mFigurePanel
@@ -78,7 +82,17 @@ class GUI {
         mConstraints.gridheight = 3;
         mConstraints.gridwidth = 1;
         //set up panel
-        mPanels[FIGURE_PANEL].setBackground(Color.RED);
+        /* **********************************Set up figure panel constraints***************************************** */
+        mFigureConstraints.weighty = 1.0;
+        mFigureConstraints.weightx = 1.0;
+        mFigureConstraints.fill = GridBagConstraints.NONE;
+        mFigureConstraints.anchor = GridBagConstraints.NORTH;
+        mInfoLabel.setFont(new Font("TimesRoman", Font.PLAIN, 14));
+        mInfoLabel.setMaximumSize(new Dimension(mPanels[FIGURE_PANEL].getWidth(), 80));
+        mInfoLabel.setMinimumSize(new Dimension(100, 20));
+        mInfoLabel.setPreferredSize(new Dimension(200, 80));
+        mPanels[FIGURE_PANEL].add(mInfoLabel, mFigureConstraints);
+        mPanels[FIGURE_PANEL].setBackground(Color.WHITE);
         mPanels[PARENT_PANEL].add(mPanels[FIGURE_PANEL], mConstraints);
 
         //Set up constraints for mAlphabetPanel
@@ -90,7 +104,7 @@ class GUI {
         mConstraints.gridwidth = 2;
         mConstraints.gridheight = 1;
         //set up panel
-        mPanels[ALPHABET_PANEL].setBackground(Color.GREEN);
+        mPanels[ALPHABET_PANEL].setBackground(Color.WHITE);
         mPanels[PARENT_PANEL].add(mPanels[ALPHABET_PANEL], mConstraints);
 
         //Set up constraints for mStatsPanel
@@ -103,8 +117,21 @@ class GUI {
         mConstraints.gridheight = 1;
         /* ********************************* Set up Stats Panel Constraints **************************************** */
 
+        mStatsConstraints.gridx = 0;
+        mStatsConstraints.gridy = 0;
+        mStatsConstraints.weightx = 1.0;
+        mStatsConstraints.weighty = 1.0;
+        mStatsConstraints.fill = GridBagConstraints.HORIZONTAL;
+        mStatsConstraints.insets = new Insets(0, 10, 0, 0);
+        mStatsLabels[LIVES_LABEL].setFont(new Font("TimesRoman", Font.PLAIN, 18));
+        mPanels[STATS_PANEL].add(mStatsLabels[LIVES_LABEL], mStatsConstraints);
 
-        mPanels[STATS_PANEL].setBackground(Color.MAGENTA);
+        mStatsConstraints.gridx = 0;
+        mStatsConstraints.gridy = 1;
+        mStatsLabels[GUESSES_LABEL].setFont(new Font("TimesRoman", Font.PLAIN, 18));
+        mPanels[STATS_PANEL].add(mStatsLabels[GUESSES_LABEL], mStatsConstraints);
+
+        mPanels[STATS_PANEL].setBackground(Color.WHITE);
         mPanels[PARENT_PANEL].add(mPanels[STATS_PANEL], mConstraints);
 
         //set up constraints for mGuessPanel
@@ -124,7 +151,6 @@ class GUI {
         mGuessConstraints.weightx = 1.0;
         mGuessConstraints.weighty = 1.0;
         //set up panel
-        mGuessLabel.setText("Enter a guess: ");
         mPanels[GUESS_PANEL].add(mGuessLabel, mGuessConstraints);
 
         //set up constraints for mGuessField
@@ -146,38 +172,54 @@ class GUI {
         //set up button
         mGuessConstraints.insets = new Insets(0, 0, 0, 0);
         mSubmitButton.addActionListener(e -> {
-            mHangman.guess(mGuessField.getText().charAt(0));
+            try {
+                showMessage(mHangman.guess(mGuessField.getText().trim().charAt(0)));
+            } catch (StringIndexOutOfBoundsException e1) {
+                showMessage("<html>You need to enter a letter<br> before submitting!<html>");
+            }
+            updateStats();
+            drawHangman(mHangman.getLives());
+            drawCharacterSlots();
             mGuessField.setText("");
+            if (mHangman.hasWon()) {
+                showMessage(mHangman.getWIN_MESSAGE());
+                mGuessField.setEnabled(false);
+            } else if (mHangman.getLives() < 1) {
+                showMessage(mHangman.getNO_LIVES_MESSAGE());
+                mGuessField.setEnabled(false);
+            }
         });
         mPanels[GUESS_PANEL].add(mSubmitButton, mGuessConstraints);
+        mPanels[GUESS_PANEL].setBackground(Color.WHITE);
         mPanels[PARENT_PANEL].add(mPanels[GUESS_PANEL], mConstraints);
 
         mFrame.add(mPanels[PARENT_PANEL]);
 //        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
         mFrame.setSize(1024, 768);
-        mFrame.setIconImage(null);//TODO: make a hangman icon image
-        mFrame.setUndecorated(false);//@Eli, we can change this later if we want to
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mFrame.setResizable(false);
+        mFrame.getToolkit().setDynamicLayout(false);
         mFrame.setVisible(true);
     }
 
     public void drawCharacterSlots() {
-        Graphics g = mPanels[PHRASE_PANEL].getGraphics();
+        mPanels[PHRASE_PANEL].invalidate();
+        final Graphics g = mPanels[PHRASE_PANEL].getGraphics();
+        mPanels[PHRASE_PANEL].update(g);
+        g.setColor(Color.BLACK);
         char[] phraseArray = mHangman.getPhrase().toCharArray();
-        g.setFont(new Font("TimesRoman", Font.PLAIN, 12));
-        g.setColor(Color.WHITE);
         for (int i = 0; i < mHangman.getPhrase().length(); i++) {
             if (!Character.isWhitespace(phraseArray[i])) {
                 g.drawLine((i * 50) + 20, 50, (i * 50) + 50, 50);
             }
         }
+        drawCorrectLetters(mHangman.getCorrectLetters(), g);
         mPanels[PHRASE_PANEL].validate();
     }
 
-    public void drawCorrectLetters(ArrayList<Character> correctLetters) {
-        final Graphics g = mPanels[PHRASE_PANEL].getGraphics();
-        g.setColor(Color.WHITE);
+    private void drawCorrectLetters(ArrayList<Character> correctLetters, Graphics g) {
+        g.setColor(Color.BLACK);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 15));
         final char[] phraseArray = mHangman.getPhrase().toLowerCase().toCharArray();
         for (int i = 0, x = 0; i < mHangman.getPhrase().length() && x < correctLetters.size(); i++) {
@@ -189,7 +231,6 @@ class GUI {
                 x++;
             }
         }
-        mPanels[PHRASE_PANEL].validate();
     }
 
     private ArrayList<Integer> getAllPositions(char letter) {
@@ -204,9 +245,10 @@ class GUI {
     }
 
     public void drawTheAlphabet() {
+        mPanels[ALPHABET_PANEL].invalidate();
         Graphics g = mPanels[ALPHABET_PANEL].getGraphics();
+        mPanels[ALPHABET_PANEL].update(g);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 25));
-        g.setColor(Color.BLACK);
         for (int i = 0, row = 0, x = 0; i < 26; i++, x++) {
             if (i % 8 == 0 && i != 0) {
                 row++;
@@ -346,23 +388,11 @@ class GUI {
         for (int position : positions) {
             row = position / 8;
             int x = position % 8;
-            g.drawLine((x * 35) + 25,//TODO: Much fixing
+            g.drawLine((x * 35) + 25,
                     (row * 25) + 5,
                     (x * 35) + 45,
                     (row * 25) + 25);
         }
-    }
-
-    @Deprecated
-    public void drawStats() {
-        mPanels[STATS_PANEL].invalidate();
-        Graphics g = mPanels[STATS_PANEL].getGraphics();
-        mPanels[STATS_PANEL].update(g);
-        g.setFont(new Font("TimesRoman", Font.PLAIN, 25));
-        g.setColor(Color.BLACK);
-        g.drawString("Lives: " + mHangman.getLives(), 20, 40);
-        g.drawString("Guesses: " + mHangman.getGuesses(), 20, 80);
-        mPanels[STATS_PANEL].validate();
     }
 
     public void drawHangman(int lives) {
@@ -370,9 +400,7 @@ class GUI {
         Graphics g = mPanels[FIGURE_PANEL].getGraphics();
         Graphics2D g2d = (Graphics2D) g;
         mPanels[FIGURE_PANEL].update(g);
-
         g.setColor(Color.BLACK);
-        System.out.println(lives);
         switch (lives) {
             case 0:
                 g2d.setStroke(new BasicStroke(3));
@@ -406,8 +434,9 @@ class GUI {
         mPanels[FIGURE_PANEL].validate();
     }
 
-    public void updateStats(int lives, int guesses) {
-
+    public void updateStats() {
+        mStatsLabels[GUESSES_LABEL].setText("Gueses: " + mHangman.getGuesses());
+        mStatsLabels[LIVES_LABEL].setText("Lives: " + mHangman.getLives());
     }
 
     private void drawFigurePart(@NotNull int part, Graphics2D g) {
@@ -442,5 +471,15 @@ class GUI {
                 break;
         }
     }
+
+    private void showMessage(String message) {
+        mInfoLabel.setText(message);
+    }
+
+    public void reset() {
+        mFrame.dispose();
+        mInfoLabel.setText("Enter a letter: ");
+    }
+
 
 }

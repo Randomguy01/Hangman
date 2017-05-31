@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 
 /**
@@ -13,21 +14,34 @@ class Hangman {
     private final String INCORRECT_GUESS = "Your guess is incorrect";
     @SuppressWarnings("FieldCanBeLocal")
     private final String DUPLICATE_GUESS = "You have already guessed ";
-    private final String NO_LIVES_MESSAGE = "Sorry, you are out of lives. The correct phrase was: ";
-    private final String WIN_MESSAGE = "CORRECT! The phrase was ";
+    private final String NO_LIVES_MESSAGE = "<html>Sorry, you are out of lives. <br>The correct phrase was: ";
+    private final String WIN_MESSAGE = "YOU WIN!!!";
     private final String mPhrase;
     private final ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private final char[] mPhraseArray;
     private final Character[] mPhraseArrayNoSpaces;
+    private ArrayList<Character> mPhraseArayNoSpacesDuplicates = new ArrayList<>();
     private final ArrayList<Character> mCorrectLetters = new ArrayList<>();
     private int mGuesses = 0;
     private int mLives = 9;
     private GUI mGUI;
 
+
     Hangman(String phrase) {
         mPhrase = phrase;
         mPhraseArray = mPhrase.toLowerCase().toCharArray();
         mPhraseArrayNoSpaces = removeWhite(mPhrase).toArray(new Character[removeWhite(mPhrase).size()]);
+        mPhraseArayNoSpacesDuplicates = removeDuplicates(mPhraseArrayNoSpaces);
+    }
+
+    private ArrayList<Character> removeDuplicates(Character[] phraseArrayNoSpaces) {
+        ArrayList<Character> output = new ArrayList<>();
+        for (char character : phraseArrayNoSpaces) {
+            if (!output.contains(character)) {
+                output.add(character);
+            }
+        }
+        return output;
     }
 
     public void setGUI(GUI GUI) {
@@ -38,7 +52,6 @@ class Hangman {
         return mCorrectLetters;
     }
 
-    @SuppressWarnings("WeakerAccess")
     public String getPhrase() {
         return mPhrase;
     }
@@ -52,13 +65,12 @@ class Hangman {
     }
 
     public String getWIN_MESSAGE() {
-        return WIN_MESSAGE + mPhrase;
+        return WIN_MESSAGE;
     }
 
     public String getNO_LIVES_MESSAGE() {
-        return NO_LIVES_MESSAGE + mPhrase;
+        return NO_LIVES_MESSAGE + mPhrase + "<html>";
     }
-
 
     public ArrayList<Character> getGuessedLetters() {
         return mGuessedLetters;
@@ -71,14 +83,15 @@ class Hangman {
             mCorrectLetters.add(letter);
             mGuessedLetters.add(letter);
             mGUI.crossOutLetters(mGuessedLetters);
-            mGUI.drawCorrectLetters(getCorrectLetters());
+            mGUI.drawCharacterSlots();
             return CORRECT_GUESS;
         } else if (isNotGuessed(letter)) {
             mGuesses++;
             mGuessedLetters.add(letter);
             mLives--;
             mGUI.crossOutLetters(mGuessedLetters);
-            mGUI.drawCorrectLetters(getCorrectLetters());
+            mGUI.drawCharacterSlots();
+            mGUI.drawHangman(this.getLives());
             return INCORRECT_GUESS;
         } else {
             return DUPLICATE_GUESS + letter;
@@ -103,6 +116,15 @@ class Hangman {
         return false;
     }
 
+    private boolean contains(char[] array, char letter) {
+        for (char position : array) {
+            if (position == letter) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private boolean contains(ArrayList<Character> array, Character letter) {
         for (Character position : array) {
             if (position == letter) {
@@ -113,10 +135,19 @@ class Hangman {
     }
 
     public boolean hasWon() {
-        for (int i = 0; i < mPhrase.length() - 1; i++) {
-            if (!contains(mGuessedLetters, mPhraseArrayNoSpaces[i])) {
+        for (Character mPhraseArayNoSpacesDuplicate : mPhraseArayNoSpacesDuplicates) {
+            if (!contains(mGuessedLetters, mPhraseArayNoSpacesDuplicate)) {
                 return false;
             }
+        }
+        if (this
+                .contains(JOptionPane.showInputDialog(null
+                        , "Do you want to play again?").toCharArray(), 'y')) {
+
+            mGUI.reset();
+            Main.main(null);
+        } else {
+            System.exit(0);
         }
         return true;
     }
@@ -129,4 +160,5 @@ class Hangman {
         }
         return noSpaces;
     }
+
 }

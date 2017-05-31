@@ -155,3 +155,4 @@ fabric.properties
 .idea/compiler.xml
 .idea/copyright/
 .idea/shelf/Uncommitted_changes_before_Update_at_5_22_2017_11_32_AM__Default_.xml
+!/src/
