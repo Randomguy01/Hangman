@@ -61,9 +61,15 @@ class GUI {
     }
 
     private void setUp() {
+        //This method sets up all of the positioning and sizing of the Jpanels and its sub JComponents
+        //Every JPanel with sub components uses a GridBagLayout which allows you to create a grid
+        //of objects and to manipulate their size in relation to other components.
+        //Therefore each JPanel must set the correct constraint conditions and then call them in the add method
+        //Every sub JPanel with sub components must also have its own constraints
+
         //Set up constraints for mPhrasePanel
         mConstraints.gridx = 0;
-        mConstraints.gridy = 3;//Might need to be 3
+        mConstraints.gridy = 3;
         mConstraints.weightx = 1.0;
         mConstraints.weighty = 0.2;
         mConstraints.fill = GridBagConstraints.BOTH;
@@ -117,6 +123,7 @@ class GUI {
         mConstraints.gridheight = 1;
         /* ********************************* Set up Stats Panel Constraints **************************************** */
 
+        //set up constraints for lives label
         mStatsConstraints.gridx = 0;
         mStatsConstraints.gridy = 0;
         mStatsConstraints.weightx = 1.0;
@@ -126,6 +133,7 @@ class GUI {
         mStatsLabels[LIVES_LABEL].setFont(new Font("TimesRoman", Font.PLAIN, 18));
         mPanels[STATS_PANEL].add(mStatsLabels[LIVES_LABEL], mStatsConstraints);
 
+        //set up constraints for guesses label
         mStatsConstraints.gridx = 0;
         mStatsConstraints.gridy = 1;
         mStatsLabels[GUESSES_LABEL].setFont(new Font("TimesRoman", Font.PLAIN, 18));
@@ -171,20 +179,23 @@ class GUI {
         mGuessConstraints.weighty = 1.0;
         //set up button
         mGuessConstraints.insets = new Insets(0, 0, 0, 0);
+        //submit button uses an action listener that is called on button press
         mSubmitButton.addActionListener(e -> {
             try {
-                showMessage(mHangman.guess(mGuessField.getText().trim().charAt(0)));
+                showMessage(mHangman.guess(mGuessField.getText().trim().charAt(0)));//call guess method and display its
+                //returned string, telling the user if they are correct or incorrect
             } catch (StringIndexOutOfBoundsException e1) {
-                showMessage("<html>You need to enter a letter<br> before submitting!<html>");
+                showMessage("<html>You need to enter a letter<br> before submitting!<html>");//catch an exception
+                //if the user hits submit without entering a letter
             }
-            updateStats();
+            updateStats();//method calls to update JFrame
             drawHangman(mHangman.getLives());
             drawCharacterSlots();
-            mGuessField.setText("");
-            if (mHangman.hasWon()) {
+            mGuessField.setText("");//clear the text field
+            if (mHangman.hasWon()) {//if the user has won tell them and disable button use
                 showMessage(mHangman.getWIN_MESSAGE());
                 mGuessField.setEnabled(false);
-            } else if (mHangman.getLives() < 1) {
+            } else if (mHangman.getLives() < 1) {//if the user has lost tell them and disable button use
                 showMessage(mHangman.getNO_LIVES_MESSAGE());
                 mGuessField.setEnabled(false);
             }
@@ -194,15 +205,16 @@ class GUI {
         mPanels[PARENT_PANEL].add(mPanels[GUESS_PANEL], mConstraints);
 
         mFrame.add(mPanels[PARENT_PANEL]);
-//        mFrame.setSize(Toolkit.getDefaultToolkit().getScreenSize());
-        mFrame.setSize(1024, 768);
+        mFrame.setSize(1024, 768);//set JFrame dimensions and values
         mFrame.setLocationRelativeTo(null);
         mFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        mFrame.setResizable(false);
-        mFrame.getToolkit().setDynamicLayout(false);
+        mFrame.setResizable(false);//This method
+        mFrame.getToolkit().setDynamicLayout(false);//and this method prevent the layout from unexpectedly repainting
+        //if the frame changes size
         mFrame.setVisible(true);
     }
 
+    //draw a slot for each letter in the user's phrase
     public void drawCharacterSlots() {
         mPanels[PHRASE_PANEL].invalidate();
         final Graphics g = mPanels[PHRASE_PANEL].getGraphics();
@@ -218,6 +230,7 @@ class GUI {
         mPanels[PHRASE_PANEL].validate();
     }
 
+    //draw each correct letter guessed above its corresponding character slot
     private void drawCorrectLetters(ArrayList<Character> correctLetters, Graphics g) {
         g.setColor(Color.BLACK);
         g.setFont(new Font("TimesRoman", Font.PLAIN, 15));
@@ -233,6 +246,7 @@ class GUI {
         }
     }
 
+    //method returns every position that a letter is at
     private ArrayList<Integer> getAllPositions(char letter) {
         letter = Character.toLowerCase(letter);
         ArrayList<Integer> positions = new ArrayList<>();
@@ -244,6 +258,7 @@ class GUI {
         return positions;
     }
 
+    //draws all letter in correct JPanel
     public void drawTheAlphabet() {
         mPanels[ALPHABET_PANEL].invalidate();
         Graphics g = mPanels[ALPHABET_PANEL].getGraphics();
@@ -259,6 +274,7 @@ class GUI {
         mPanels[ALPHABET_PANEL].validate();
     }
 
+    //gets a char based on integer position
     private char getCharFromInt(int position) {
         switch (position) {
             case 0:
@@ -318,6 +334,7 @@ class GUI {
         }
     }
 
+    //gets an int for the postition that a char is at in the alphabet
     private int getIntFromChar(char letter) {
         letter = Character.toUpperCase(letter);
         switch (letter) {
@@ -379,6 +396,7 @@ class GUI {
         }
     }
 
+    //crosses out all guessed letters drawn by drawTheAlphabet()
     public void crossOutLetters(ArrayList<Character> letters) {
         ArrayList<Integer> positions = new ArrayList<>();
         for (char letter : letters)
@@ -395,12 +413,15 @@ class GUI {
         }
     }
 
+    //swith statement without breaks draws all necessary parts
     public void drawHangman(int lives) {
         mPanels[FIGURE_PANEL].invalidate();
         Graphics g = mPanels[FIGURE_PANEL].getGraphics();
         Graphics2D g2d = (Graphics2D) g;
         mPanels[FIGURE_PANEL].update(g);
         g.setColor(Color.BLACK);
+        //This switch statement uses no break statements. This causes the compiler to fall through and print all the
+        //cases after the case that matches. This means that if you have 4 lives the compiler will run cases 4-8.
         switch (lives) {
             case 0:
                 g2d.setStroke(new BasicStroke(3));
@@ -434,11 +455,13 @@ class GUI {
         mPanels[FIGURE_PANEL].validate();
     }
 
+    //updates the JLabels with appropriate values
     public void updateStats() {
         mStatsLabels[GUESSES_LABEL].setText("Gueses: " + mHangman.getGuesses());
         mStatsLabels[LIVES_LABEL].setText("Lives: " + mHangman.getLives());
     }
 
+    //draws a specific figure part called from the drawHangman method
     private void drawFigurePart(@NotNull int part, Graphics2D g) {
         switch (part) {
             case BOTTOM_POST:
@@ -472,13 +495,14 @@ class GUI {
         }
     }
 
+    //show message method updates the info label wit text
     private void showMessage(String message) {
         mInfoLabel.setText(message);
     }
 
+    //method called at end of game. Called to deltete the frame so the game can start over or end
     public void reset() {
         mFrame.dispose();
-        mInfoLabel.setText("Enter a letter: ");
     }
 
 

@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d14e7b-0df6-4447-8786-ccc25e71e502" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_22_2017_11_32_AM__Default_/shelved.patch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_24_2017_7_57_PM__Default_/Hangman.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Hangman/Hangman.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Hangman/Main.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Hangman/GUI.class" afterPath="$PROJECT_DIR$/out/production/Hangman/GUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.java" afterPath="$PROJECT_DIR$/src/GUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Hangman.java" afterPath="$PROJECT_DIR$/src/Hangman.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
@@ -35,36 +25,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="425">
+              <caret line="28" column="56" lean-forward="false" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
               <folding>
                 <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#322#323#0" expanded="true" />
+                <element signature="e#366#367#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="220" column="11" lean-forward="false" selection-start-line="220" selection-start-column="11" selection-end-line="220" selection-end-column="11" />
+            <state relative-caret-position="880">
+              <caret line="502" column="97" lean-forward="false" selection-start-line="502" selection-start-column="97" selection-end-line="502" selection-end-column="97" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#setUp#0;class#GUI#0" expanded="false" />
+                <element signature="method#drawCharacterSlots#0;class#GUI#0" expanded="false" />
                 <element signature="method#getAllPositions#0;class#GUI#0" expanded="false" />
                 <element signature="method#drawTheAlphabet#0;class#GUI#0" expanded="false" />
                 <element signature="method#getCharFromInt#0;class#GUI#0" expanded="false" />
                 <element signature="method#getIntFromChar#0;class#GUI#0" expanded="false" />
                 <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
                 <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
-                <element signature="method#updateStats#0;class#GUI#0" expanded="false" />
                 <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-                <element signature="e#16851#16852#0" expanded="true" />
-                <element signature="e#16894#16895#0" expanded="true" />
+                <element signature="e#18809#18810#0" expanded="true" />
+                <element signature="e#18852#18853#0" expanded="true" />
+                <element signature="e#18977#18978#0" expanded="true" />
+                <element signature="e#19009#19010#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,10 +66,11 @@
       <file leaf-file-name="Hangman.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
+            <state relative-caret-position="704">
+              <caret line="163" column="61" lean-forward="false" selection-start-line="163" selection-start-column="61" selection-end-line="163" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,8 +121,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/OnWinListener.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/GUI.java" />
         <option value="$PROJECT_DIR$/src/Hangman.java" />
+        <option value="$PROJECT_DIR$/src/GUI.java" />
       </list>
     </option>
   </component>
@@ -449,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496179718148</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Finished Game">
+      <created>1496231868011</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1496231868011</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -569,7 +570,8 @@
     <MESSAGE value="Fixed guesses and fixed crossOutLetter" />
     <MESSAGE value="Stuff" />
     <MESSAGE value="program now draws hangman figures based on number of lives" />
-    <option name="LAST_COMMIT_MESSAGE" value="program now draws hangman figures based on number of lives" />
+    <MESSAGE value="Finished Game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Game" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -591,6 +593,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -601,7 +604,7 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,16 +615,19 @@
           <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawCharacterSlots#0;class#GUI#0" expanded="false" />
             <element signature="method#getAllPositions#0;class#GUI#0" expanded="false" />
             <element signature="method#drawTheAlphabet#0;class#GUI#0" expanded="false" />
             <element signature="method#getCharFromInt#0;class#GUI#0" expanded="false" />
             <element signature="method#getIntFromChar#0;class#GUI#0" expanded="false" />
             <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
             <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
-            <element signature="method#updateStats#0;class#GUI#0" expanded="false" />
             <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-            <element signature="e#16851#16852#0" expanded="true" />
-            <element signature="e#16894#16895#0" expanded="true" />
+            <element signature="e#18809#18810#0" expanded="true" />
+            <element signature="e#18852#18853#0" expanded="true" />
+            <element signature="e#18977#18978#0" expanded="true" />
+            <element signature="e#19009#19010#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -632,6 +638,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -642,7 +649,7 @@
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -653,16 +660,19 @@
           <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawCharacterSlots#0;class#GUI#0" expanded="false" />
             <element signature="method#getAllPositions#0;class#GUI#0" expanded="false" />
             <element signature="method#drawTheAlphabet#0;class#GUI#0" expanded="false" />
             <element signature="method#getCharFromInt#0;class#GUI#0" expanded="false" />
             <element signature="method#getIntFromChar#0;class#GUI#0" expanded="false" />
             <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
             <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
-            <element signature="method#updateStats#0;class#GUI#0" expanded="false" />
             <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-            <element signature="e#16851#16852#0" expanded="true" />
-            <element signature="e#16894#16895#0" expanded="true" />
+            <element signature="e#18809#18810#0" expanded="true" />
+            <element signature="e#18852#18853#0" expanded="true" />
+            <element signature="e#18977#18978#0" expanded="true" />
+            <element signature="e#19009#19010#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -673,6 +683,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,7 +694,7 @@
           <caret line="77" column="124" lean-forward="false" selection-start-line="77" selection-start-column="124" selection-end-line="77" selection-end-column="124" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -694,6 +705,7 @@
           <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -704,7 +716,7 @@
           <caret line="125" column="27" lean-forward="false" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -715,6 +727,7 @@
           <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -725,7 +738,7 @@
           <caret line="85" column="36" lean-forward="false" selection-start-line="85" selection-start-column="36" selection-end-line="85" selection-end-column="36" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -743,6 +756,7 @@
           <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -753,7 +767,7 @@
           <caret line="15" column="82" lean-forward="false" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -764,6 +778,7 @@
           <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -774,7 +789,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -785,6 +800,7 @@
           <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -795,7 +811,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -813,6 +829,7 @@
           <caret line="52" column="54" lean-forward="false" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -823,7 +840,7 @@
           <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -841,7 +858,7 @@
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -852,6 +869,7 @@
           <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,7 +887,7 @@
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -880,6 +898,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -987,43 +1006,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="220" column="11" lean-forward="false" selection-start-line="220" selection-start-column="11" selection-end-line="220" selection-end-column="11" />
+        <state relative-caret-position="425">
+          <caret line="28" column="56" lean-forward="false" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAllPositions#0;class#GUI#0" expanded="false" />
-            <element signature="method#drawTheAlphabet#0;class#GUI#0" expanded="false" />
-            <element signature="method#getCharFromInt#0;class#GUI#0" expanded="false" />
-            <element signature="method#getIntFromChar#0;class#GUI#0" expanded="false" />
-            <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
-            <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
-            <element signature="method#updateStats#0;class#GUI#0" expanded="false" />
-            <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
-            <element signature="e#16851#16852#0" expanded="true" />
-            <element signature="e#16894#16895#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#366#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Hangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="92" column="38" lean-forward="true" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
+        <state relative-caret-position="704">
+          <caret line="163" column="61" lean-forward="false" selection-start-line="163" selection-start-column="61" selection-end-line="163" selection-end-column="61" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#removeDuplicates#0;class#Hangman#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="880">
+          <caret line="502" column="97" lean-forward="false" selection-start-line="502" selection-start-column="97" selection-end-line="502" selection-end-column="97" />
           <folding>
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#setUp#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawCharacterSlots#0;class#GUI#0" expanded="false" />
+            <element signature="method#getAllPositions#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawTheAlphabet#0;class#GUI#0" expanded="false" />
+            <element signature="method#getCharFromInt#0;class#GUI#0" expanded="false" />
+            <element signature="method#getIntFromChar#0;class#GUI#0" expanded="false" />
+            <element signature="method#crossOutLetters#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawHangman#0;class#GUI#0" expanded="false" />
+            <element signature="method#drawFigurePart#0;class#GUI#0" expanded="false" />
+            <element signature="e#18809#18810#0" expanded="true" />
+            <element signature="e#18852#18853#0" expanded="true" />
+            <element signature="e#18977#18978#0" expanded="true" />
+            <element signature="e#19009#19010#0" expanded="true" />
           </folding>
         </state>
       </provider>

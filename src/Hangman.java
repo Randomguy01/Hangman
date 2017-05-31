@@ -8,32 +8,34 @@ import java.util.ArrayList;
  * JDK 1.8
  */
 class Hangman {
-    @SuppressWarnings("FieldCanBeLocal")
+    //Final String fields used to display information to user
+    //JLabels can be formatted useing html. <br> is the same as \n
     private final String CORRECT_GUESS = "Your guess is correct";
-    @SuppressWarnings("FieldCanBeLocal")
     private final String INCORRECT_GUESS = "Your guess is incorrect";
-    @SuppressWarnings("FieldCanBeLocal")
     private final String DUPLICATE_GUESS = "You have already guessed ";
     private final String NO_LIVES_MESSAGE = "<html>Sorry, you are out of lives. <br>The correct phrase was: ";
     private final String WIN_MESSAGE = "YOU WIN!!!";
+    //declare arrays and initialize arraylists
     private final String mPhrase;
-    private final ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private final char[] mPhraseArray;
+    private final ArrayList<Character> mGuessedLetters = new ArrayList<>();
     private final Character[] mPhraseArrayNoSpaces;
     private ArrayList<Character> mPhraseArayNoSpacesDuplicates = new ArrayList<>();
     private final ArrayList<Character> mCorrectLetters = new ArrayList<>();
+    //initialize stats to default values
     private int mGuesses = 0;
     private int mLives = 9;
     private GUI mGUI;
 
 
-    Hangman(String phrase) {
+    Hangman(String phrase) {//constructor used to set values of arraylists
         mPhrase = phrase;
         mPhraseArray = mPhrase.toLowerCase().toCharArray();
         mPhraseArrayNoSpaces = removeWhite(mPhrase).toArray(new Character[removeWhite(mPhrase).size()]);
         mPhraseArayNoSpacesDuplicates = removeDuplicates(mPhraseArrayNoSpaces);
     }
 
+    //method removes any duplicate chars in Character array
     private ArrayList<Character> removeDuplicates(Character[] phraseArrayNoSpaces) {
         ArrayList<Character> output = new ArrayList<>();
         for (char character : phraseArrayNoSpaces) {
@@ -44,6 +46,7 @@ class Hangman {
         return output;
     }
 
+    /* ***************************** Getters and setters for necessary fields **************************************/
     public void setGUI(GUI GUI) {
         mGUI = GUI;
     }
@@ -76,6 +79,7 @@ class Hangman {
         return mGuessedLetters;
     }
 
+    //method takes user entered char and returns String message
     public String guess(char letter) {
         letter = Character.toLowerCase(letter);
         if (contains(mPhraseArrayNoSpaces, letter) && isNotGuessed(letter)) {
@@ -99,6 +103,7 @@ class Hangman {
 
     }
 
+    //returns false if a letter has not been guessed
     private boolean isNotGuessed(char letter) {
         for (char guessedLetter : mGuessedLetters) {
             if (guessedLetter == letter)
@@ -107,6 +112,7 @@ class Hangman {
         return true;
     }
 
+    //method returns false if Character array does not contain letter
     private boolean contains(Character[] array, char letter) {
         for (char position : array) {
             if (position == letter) {
@@ -116,6 +122,7 @@ class Hangman {
         return false;
     }
 
+    //overloaded method for char array
     private boolean contains(char[] array, char letter) {
         for (char position : array) {
             if (position == letter) {
@@ -125,6 +132,7 @@ class Hangman {
         return false;
     }
 
+    //overloaded metod for ArrayList<Character>
     private boolean contains(ArrayList<Character> array, Character letter) {
         for (Character position : array) {
             if (position == letter) {
@@ -134,6 +142,7 @@ class Hangman {
         return false;
     }
 
+    //returns boolean to check if user has won the game
     public boolean hasWon() {
         for (Character mPhraseArayNoSpacesDuplicate : mPhraseArayNoSpacesDuplicates) {
             if (!contains(mGuessedLetters, mPhraseArayNoSpacesDuplicate)) {
@@ -152,6 +161,7 @@ class Hangman {
         return true;
     }
 
+    //method removes white space from ArrayList of Characters
     private ArrayList<Character> removeWhite(String phrase) {
         ArrayList<Character> noSpaces = new ArrayList<>();
         for (char character : phrase.toCharArray()) {
